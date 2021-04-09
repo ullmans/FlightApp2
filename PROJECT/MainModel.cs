@@ -11,7 +11,7 @@ using Microsoft.VisualBasic.FileIO;
 
 namespace ex1
 {
-    class MainModel
+    class MainModel:
     {
         static void Main()
         {
