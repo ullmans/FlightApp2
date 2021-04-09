@@ -10,7 +10,7 @@ using System.Threading;
 using Microsoft.VisualBasic.FileIO;
 using System.ComponentModel;
 
-namespace ex1
+namespace MileStone1 
 {
     class MainModel: IPlaneModel
     {

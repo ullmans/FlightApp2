@@ -2,62 +2,37 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MileStone1"
-        mc:Ignorable="d"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d" 
         Title="Window1" Height="450" Width="800">
     <Grid>
-
         <TextBox HorizontalAlignment = "Center" Height = "130" Margin = "0,10,0,0" Text = "Flight Inspection App" VerticalAlignment = "Top" Width = "700"
                  BorderBrush = "White" FontSize = "70" TextAlignment = "Center" />
-
         <TextBox HorizontalAlignment = "Left" Height = "20" Margin = "30,175,0,0"  Text = "To start,  upload a csv file" VerticalAlignment = "Top" Width = "400"
                  FontSize = "15" BorderBrush = "White" />
-
-        <TextBox Name = "t_filePath" HorizontalAlignment = "Left" Height = "20" Margin = "30,195,0,0"  Text = "" VerticalAlignment = "Top" Width = "400"
-                 FontSize = "15" BorderBrush = "Gray" Background = "LightGray" >
-
+        <TextBox Name = "t_filePath" HorizontalAlignment = "Left" Height = "20" Margin = "30,195,0,0" Text = "" VerticalAlignment = "Top" Width = "400"
+                 FontSize = "15" BorderBrush = "Gray" Background = "LightGray">
             <TextBox.Resources >
-
                 <Style TargetType = "{x:Type Border}" >
-
                     <Setter Property = "CornerRadius" Value = "5" />
-
                 </Style >
-
             </TextBox.Resources >
-
         </TextBox >
-
         <Button Name = "b_browse" Click = "b_browse_Click" Content = "Browse" HorizontalAlignment = "Left" Margin = "435,195,0,0" VerticalAlignment = "Top" Width = "75" FontWeight = "Bold" BorderBrush = "Black" >
-
             <Button.Resources >
-
                 <Style TargetType = "{x:Type Border}" >
-
                     <Setter Property = "CornerRadius" Value = "5" />
-
                 </Style >
-
             </Button.Resources >
-
         </Button >
-
         <TextBox Name = "t_loadState" HorizontalAlignment = "Center" Height = "20" Margin = "0,280,0,0" Text = "" VerticalAlignment = "Top" Width = "250" BorderBrush = "White" FontSize = "15" />
-
         <Button Name = "b_start" Content = "Start" HorizontalAlignment = "Center" Margin = "0,300,0,0" VerticalAlignment = "Top" Width = "250" Height = "100" FontSize = "75" BorderThickness = "3"
                 BorderBrush = "Black" IsEnabled = "False" Click = "b_start_Click" >
-
             <Button.Resources >
-
                 <Style TargetType = "{x:Type Border}" >
-
                     <Setter Property = "CornerRadius" Value = "5" />
-
                 </Style >
-
             </Button.Resources >
-
         </Button >
     </Grid>
 </Window>
