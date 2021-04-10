@@ -2,7 +2,7 @@ using System;
 using System.Net.Sockets;
 using System.Text;
 
-class TalentClient: ITalnetClient
+class TelentClient: ITelnetClient
 {
     private TcpClient client;
     public void Connect(string ip, int port) 

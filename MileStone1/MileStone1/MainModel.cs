@@ -15,24 +15,24 @@ namespace MileStone1
     class MainModel: IPlaneModel
     {
         bool stop;
-        ITalnetClient talnetClient;
+        ITelnetClient telnetClient;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public MainModel(ITalnetClient tc)
+        public MainModel(ITelnetClient tc)
         {
-            this.talnetClient = tc;
+            this.telnetClient = tc;
             stop = false;
         }
 
         public void Connect(string ip, int port)
         {
-            this.talnetClient.Connect(ip, port);
+            this.telnetClient.Connect(ip, port);
         }
 
         public void Disconnect()
         {
             stop = true;
-            talnetClient.Disconnect();
+            telnetClient.Disconnect();
         }
 
         public void Start(string path)

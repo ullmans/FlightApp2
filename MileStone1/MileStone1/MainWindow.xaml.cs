@@ -29,7 +29,7 @@ namespace MileStone1 {
 
         public MainWindow() {
             InitializeComponent();
-            viewModel = new MainPlaneViewModel(new MainModel(new TalentClient()));
+            viewModel = new MainPlaneViewModel(new MainModel(new TelentClient()));
             DataContext = viewModel;
         }
 
