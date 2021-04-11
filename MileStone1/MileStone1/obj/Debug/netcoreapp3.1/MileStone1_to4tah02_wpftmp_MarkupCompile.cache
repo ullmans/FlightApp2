@@ -1,19 +1,19 @@
-﻿MileStone1
+﻿MileStone1_to4tah02_wpftmp
 
 
 winexe
 C#
 .cs
-C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Release\netcoreapp3.1\
-MileStone1
+C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
+MileStone1_to4tah02_wpftmp
 none
 false
-TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\App.xaml
 4-1702899681
 
-18-648353267
-1921654412462
+24616398558
+384-986142372
 controls\controlBar\controlBar.xaml;controls\joystick\joystick.xaml;DataView.xaml;FileRead\MainWindow.xaml;
 
 True

@@ -4,17 +4,17 @@ using System.Text;
 
 namespace MileStone1 {
     interface IFileReadModel {
-        public void ReadDataFile(string FilePath);
+        public void ReadDataFile(string filePath);  //done
 
-        public double[][] GetDataLog();
+        public List<double[]> GetDataLog(); //done
 
         public delegate void UseDataLog();
-        public event UseDataLog DataReadFinished;
+        public event UseDataLog DataReadFinished;   //used
 
-        public void ReadDefinitionFile(string FilePath);
+        public void ReadDefinitionFile(string filePath);    //done
 
         public double GetSampleRate();
-        public double[] GetDefinitions();
+        public List<string> GetDefinitions();   //done
 
         public delegate void UseDefinitions();
         public event UseDefinitions DefinitionReadFinished;

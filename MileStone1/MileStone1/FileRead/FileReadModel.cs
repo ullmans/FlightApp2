@@ -12,17 +12,63 @@ using System.ComponentModel;
 
 namespace MileStone1 
 {
-    class FileReadModel: IDataModel
+    class FileReadModel: IFileReadModel
     {
         bool stop;
         ITelnetClient telnetClient;
+        List<double[]> dataLogCSV;
+        List<string> props; //properties
         public event PropertyChangedEventHandler PropertyChanged;
 
         public FileReadModel(ITelnetClient tc)
         {
             this.telnetClient = tc;
             stop = false;
+            dataLogCSV = new List<double[]>();
+            props = new List<string>();
         }
+        public void ReadDataFile(string filePath)
+        {
+            using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
+            {
+                string line;
+                while ((line = connectionReader.ReadLine()) != null)
+                {
+                    string[] splittedLine = line.Split(',');
+                    double[] lineInNumbers = new double[splittedLine.Length];
+                    for (int i = 0; i < splittedLine.Length; ++i)
+                    {
+                        lineInNumbers[i] = double.Parse(splittedLine[i]);
+                    }
+                }
+            }
+        }
+
+        public List<double[]> GetDataLog()
+        {
+            return dataLogCSV;
+        }
+
+        public void ReadDefinitionFile(string filePath)
+        {
+            using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
+            {
+                string line;
+                while ((line = connectionReader.ReadLine()) != null)
+                {
+                    string[] splittedLine = line.Split('>');
+                    if (splittedLine[0].Equals("<name"))
+                    {
+                        props.Add((splittedLine[1].Split('<'))[0]);
+                    }
+                }
+            }
+        }
+        public List<string> GetDefinitions()
+        {
+            return this.props;
+        }
+
 
         public void Connect(string ip, int port)
         {
@@ -37,8 +83,6 @@ namespace MileStone1
 
         public void Start(string path)
         {
-            //TcpClient client = new TcpClient("localhost", 8081);
-            //NetworkStream stream = client.GetStream();
             new Thread(delegate () 
             {
                 using (TextReader connectionReader = new StreamReader(path))    //"./reg_flight.csv"
@@ -50,32 +94,11 @@ namespace MileStone1
                         StringBuilder stringBuilder = new StringBuilder();
                         stringBuilder.Append(line);
                         stringBuilder.Append("\n");
-
-                        //Byte[] msg = Encoding.ASCII.GetBytes(stringBuilder.ToString());
-                        //stream.Write(msg, 0, msg.Length);
                         this.telnetClient.Write(stringBuilder.ToString());
                         Thread.Sleep(100);
                     }
                 }
             }).Start();
-            /*using (TextReader connectionReader = new StreamReader("./reg_flight.csv"))
-            {
-                string line;
-                while ((line = connectionReader.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                    StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append(line);
-                    stringBuilder.Append("\n");
-
-                    //Byte[] msg = Encoding.ASCII.GetBytes(stringBuilder.ToString());
-                    //stream.Write(msg, 0, msg.Length);
-                    
-                    Thread.Sleep(100);
-                }
-            }
-            stream.Close();
-            client.Close();*/
         }
 
 
@@ -85,6 +108,7 @@ namespace MileStone1
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
 
+        //the properties of the plane
         private double height;
         public double Height
         {
