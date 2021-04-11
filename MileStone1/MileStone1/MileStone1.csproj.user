@@ -7,10 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="DataView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="controls\controlBar.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="DataView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="fileRead\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

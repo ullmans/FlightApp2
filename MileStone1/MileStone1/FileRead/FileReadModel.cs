@@ -53,7 +53,7 @@ namespace MileStone1
 
                         //Byte[] msg = Encoding.ASCII.GetBytes(stringBuilder.ToString());
                         //stream.Write(msg, 0, msg.Length);
-                        this.talnetClient.Write(stringBuilder.ToString());
+                        this.telnetClient.Write(stringBuilder.ToString());
                         Thread.Sleep(100);
                     }
                 }

@@ -12,7 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 
-namespace test1.controls
+namespace MileStone1.controls
 {
     /// <summary>
     /// Interaction logic for UserControl1.xaml
