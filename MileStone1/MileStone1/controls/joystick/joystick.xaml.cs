@@ -8,23 +8,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MileStone1 {
+namespace MileStone1.controls.joystick {
     /// <summary>
-    /// Interaction logic for DataView.xaml
+    /// Interaction logic for joystick.xaml
     /// </summary>
-    public partial class DataView : Window {
-        public DataView() {
+    public partial class joystick : UserControl {
+        public joystick() {
             InitializeComponent();
-        }
-
-        private void control_bar_Loaded(object sender, RoutedEventArgs e) {
-
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e) {
-
         }
     }
 }

@@ -6,16 +6,16 @@ namespace MileStone1 {
         void Connect(string ip, int port);
         void Disconnect();
 
-        void Start(string path);
-        //void Stop();
+        //flow
+        void Start();
+        void Pause();
+        void Resume();
 
-        //properties
-        double Height { set; get; }
-        double Speed { set; get; }
-        double Pitch { set; get; }
-        double Roll { set; get; }
-        double Yaw { set; get; }
+        //timing
         double Time { get; set; }
-        double PlaySpeed { get; set; }
+        double Speed { get; set; }
+
+        public delegate void UsePropertyUpdate(string propety, double newValue);
+        public event UsePropertyUpdate PropertyUpdated;
     }
 }

@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="DataView" Height="450" Width="800">
     <Grid>
-        <Controls:ControlBar x:Name="control_bar" Margin="0,250,0,0"/>
+        <Controls:ControlBar x:Name="control_bar" Margin="0,250,0,0" Loaded="control_bar_Loaded"/>
+        <Button x:Name="button" Content="Button" Height="0" Margin="127,139,673,295" Width="0"/>
     </Grid>
 </Window>

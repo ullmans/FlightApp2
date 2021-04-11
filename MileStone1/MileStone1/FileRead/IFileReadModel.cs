@@ -6,7 +6,7 @@ namespace MileStone1 {
     interface IFileReadModel {
         public void ReadFile(string FilePath);
 
-        public int[][] GetDataLog();
+        public double[][] GetDataLog();
 
         public delegate void UseLog();
         public event UseLog ReadFinished;
