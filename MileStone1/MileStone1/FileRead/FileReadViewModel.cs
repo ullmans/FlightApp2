@@ -2,7 +2,7 @@ using System.ComponentModel;
 using Microsoft.Win32;
 
 namespace MileStone1 {
-    class MainPlaneViewModel : IPlaneViewModel {
+    class FileReadViewModel : IPlaneViewModel {
         private IPlaneModel model;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -17,7 +17,7 @@ namespace MileStone1 {
             }
         }
 
-        public MainPlaneViewModel(IPlaneModel model) {
+        public FileReadViewModel(IPlaneModel model) {
             filePath = "";
             this.model = model;
         }

@@ -12,13 +12,13 @@ using System.ComponentModel;
 
 namespace MileStone1 
 {
-    class MainModel: IPlaneModel
+    class FileReadModel: IPlaneModel
     {
         bool stop;
         ITelnetClient telnetClient;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public MainModel(ITelnetClient tc)
+        public FileReadModel(ITelnetClient tc)
         {
             this.telnetClient = tc;
             stop = false;
