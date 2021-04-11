@@ -12,7 +12,7 @@ using System.ComponentModel;
 
 namespace MileStone1 
 {
-    class FileReadModel: IPlaneModel
+    class FileReadModel: IDataModel
     {
         bool stop;
         ITelnetClient telnetClient;

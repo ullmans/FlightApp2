@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 
 namespace MileStone1 {
-    interface IPlaneModel : INotifyPropertyChanged {
+    interface IDataModel : INotifyPropertyChanged {
         //communication with the simulator
         void Connect(string ip, int port);
         void Disconnect();

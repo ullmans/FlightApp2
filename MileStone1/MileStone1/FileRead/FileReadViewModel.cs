@@ -3,7 +3,7 @@ using Microsoft.Win32;
 
 namespace MileStone1 {
     class FileReadViewModel : IPlaneViewModel {
-        private IPlaneModel model;
+        private IDataModel model;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -17,7 +17,7 @@ namespace MileStone1 {
             }
         }
 
-        public FileReadViewModel(IPlaneModel model) {
+        public FileReadViewModel(IDataModel model) {
             filePath = "";
             this.model = model;
         }
