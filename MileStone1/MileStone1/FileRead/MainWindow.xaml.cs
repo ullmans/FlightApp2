@@ -29,7 +29,7 @@ namespace MileStone1 {
 
         public MainWindow() {
             InitializeComponent();
-            viewModel = new MainPlaneViewModel(new MainModel(new TelentClient()));
+            viewModel = new FileReadViewModel(new FileReadModel(new TelentClient()));
             DataContext = viewModel;
         }
 
