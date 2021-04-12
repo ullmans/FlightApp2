@@ -1,20 +1,20 @@
 ﻿MileStone1
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\Home\Documents\Tal\bar_ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
+C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
 MileStone1
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Home\Documents\Tal\bar_ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp\FlightApp2\MileStone1\MileStone1\App.xaml
-4-1702899681
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\App.xaml
+41252045141
 
-19-1237427580
-1921654412462
+201657372625
+192-1533232326
 controls\controlBar\controlBar.xaml;controls\joystick\joystick.xaml;DataView.xaml;FileRead\MainWindow.xaml;
 
-False
+True
 

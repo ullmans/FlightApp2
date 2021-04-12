@@ -34,7 +34,7 @@ class ControlBarViewModel : INotifyPropertyChanged
     {
 		get { return this.model.position; }
     }
-	public int VM_playSpeed
+	public double VM_playSpeed
     {
 		get { return this.model.playSpeed; }
     }
@@ -59,16 +59,17 @@ class ControlBarViewModel : INotifyPropertyChanged
 	{
 		if (VM_playSpeed > 0)
 		{
-			this.model.playSpeed--;
+			this.model.playSpeed -= 0.1;
 		}
+		if (VM_playSpeed < 0.01)
+        {
+			this.model.playSpeed = 0;
+        }
 	}
 	
 	public void increaseSpeed()
     {
-		if (VM_playSpeed < 20)
-        {
-			this.model.playSpeed++;
-        }
+		this.model.playSpeed += 0.1;
     }
 
 	public void Pause()

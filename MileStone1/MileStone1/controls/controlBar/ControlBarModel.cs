@@ -11,7 +11,7 @@ class ControlBarModel : IControlBarModel
         this.running = false;
         this.lines = lines;
         this.position = 0;
-        this.playSpeed = 10;
+        this.playSpeed = 1;
     }
 
     public void NotifyPropertyChanged(string propName)
@@ -36,7 +36,7 @@ class ControlBarModel : IControlBarModel
         }
     }
 
-    private int Lines, Position, PlaySpeed;
+    private int Lines, Position;
     public int lines
     {
         get { return this.Lines; }
@@ -59,7 +59,9 @@ class ControlBarModel : IControlBarModel
             }
         }
     }
-    public int playSpeed
+
+    private double PlaySpeed;
+    public double playSpeed
     {
         get { return this.PlaySpeed; }
         set
