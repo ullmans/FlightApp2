@@ -6,10 +6,10 @@ class ControlBarModel : IControlBarModel
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ControlBarModel(int steps)
+    public ControlBarModel(int lines)
     {
         this.running = false;
-        this.steps = steps;
+        this.lines = lines;
         this.position = 0;
         this.playSpeed = 10;
     }
@@ -36,14 +36,14 @@ class ControlBarModel : IControlBarModel
         }
     }
 
-    private int Steps, Position, PlaySpeed;
-    public int steps
+    private int Lines, Position, PlaySpeed;
+    public int lines
     {
-        get { return this.Steps; }
-        set { if (this.Steps != value)
+        get { return this.Lines; }
+        set { if (this.Lines != value)
             {
-                this.Steps = value;
-                this.NotifyPropertyChanged("Steps");
+                this.Lines = value;
+                this.NotifyPropertyChanged("Lines");
             } 
         }
     }

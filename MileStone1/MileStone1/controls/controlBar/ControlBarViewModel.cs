@@ -26,9 +26,9 @@ class ControlBarViewModel : INotifyPropertyChanged
     {
 		get { return this.model.running; }
     }
-	public int VM_steps
+	public int VM_lines
     {
-		get { return this.model.steps; }
+		get { return this.model.lines; }
     }
 	public int VM_position
     {
@@ -49,9 +49,9 @@ class ControlBarViewModel : INotifyPropertyChanged
 
 	public void goToEnd()
 	{
-		if (VM_position != VM_steps)
+		if (VM_position != VM_lines)
 		{
-			this.model.position = VM_steps;
+			this.model.position = VM_lines;
 		}
 	}
 
