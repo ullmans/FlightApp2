@@ -8,7 +8,7 @@ namespace MileStone1 {
 
         public List<double[]> GetDataLog(); //done
 
-        public delegate void UseDataLog();
+        public delegate void UseDataLog(object sender);
         public event UseDataLog DataReadFinished;   //used
 
         public void ReadDefinitionFile(string filePath);    //done
@@ -16,7 +16,7 @@ namespace MileStone1 {
         public double GetSampleRate();
         public List<string> GetDefinitions();   //done
 
-        public delegate void UseDefinitions();
+        public delegate void UseDefinitions(object sender);
         public event UseDefinitions DefinitionReadFinished;
     }
 }
