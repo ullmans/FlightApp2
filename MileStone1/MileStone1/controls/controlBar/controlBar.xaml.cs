@@ -76,10 +76,5 @@ namespace MileStone1.controls
             vm.skipTo(Convert.ToInt32(progressBar.Value));
             t_progress.Text = (Convert.ToInt32(vm.VM_position * 100 / vm.VM_lines)).ToString() + "%";
         }
-
-        private void b_move_Click(object sender, RoutedEventArgs e)
-        {
-            vm.move();
-        }
     }
 }
