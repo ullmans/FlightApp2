@@ -8,25 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Home\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\BenZvi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Home\\Documents\\Tal\\bar_ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+      "projectUniqueName": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
       "projectName": "MileStone1",
-      "projectPath": "C:\\Users\\Home\\Documents\\Tal\\bar_ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
-      "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Home\\Documents\\Tal\\bar_ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp\\FlightApp2\\MileStone1\\MileStone1\\obj\\",
+      "projectPath": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+      "packagesPath": "C:\\Users\\BenZvi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\BenZvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -37,6 +37,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -48,6 +49,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -66,7 +68,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

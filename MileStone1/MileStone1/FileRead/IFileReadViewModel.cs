@@ -4,11 +4,16 @@ using System.Text;
 
 namespace MileStone1 {
     interface IFileReadViewModel {
-        public void ReadFile(string FilePath);
+        string DataFilePath { set; get; }
+        string DefinitionsFilePath { set; get; }
 
-        public int[][] GetDataLog();
+        public void ReadFile(FileType fileType);
 
-        public delegate void UseLog();
-        public event UseLog ReadFinished;
+        public List<double[]> GetDataLog();
+        public double GetSampleRate();
+        public List<string> GetDefinitions();
+
+        public delegate void UseResult(object sender, FileType fileType);
+        public event UseResult FileReadFinished;
     }
 }

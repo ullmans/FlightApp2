@@ -8,9 +8,11 @@
     <Grid>
         <TextBox HorizontalAlignment = "Center" Height = "130" Margin = "0,10,0,0" Text = "Flight Inspection App" VerticalAlignment = "Top" Width = "700"
                  BorderBrush = "White" FontSize = "70" TextAlignment = "Center" />
-        <TextBox HorizontalAlignment = "Left" Height = "20" Margin = "30,175,0,0"  Text = "To start,  upload a csv file" VerticalAlignment = "Top" Width = "400"
+        
+        
+        <TextBox HorizontalAlignment = "Left" Height = "25" Margin = "30,140,0,0"  Text = "Upload a flight data file (.csv)" VerticalAlignment = "Top" Width = "400"
                  FontSize = "15" BorderBrush = "White" />
-        <TextBox Name = "t_filePath" HorizontalAlignment = "Left" Height = "20" Margin = "30,195,0,0" Text = "" VerticalAlignment = "Top" Width = "400"
+        <TextBox Name = "t_dataFilePath" HorizontalAlignment = "Left" Height = "20" Margin = "30,165,0,0" Text = "" VerticalAlignment = "Top" Width = "400"
                  FontSize = "15" BorderBrush = "Gray" Background = "LightGray">
             <TextBox.Resources >
                 <Style TargetType = "{x:Type Border}" >
@@ -18,14 +20,40 @@
                 </Style >
             </TextBox.Resources >
         </TextBox >
-        <Button Name = "b_browse" Click = "b_browse_Click" Content = "Browse" HorizontalAlignment = "Left" Margin = "435,195,0,0" VerticalAlignment = "Top" Width = "75" FontWeight = "Bold" BorderBrush = "Black" >
+        <Button Name = "b_browseData" Click = "b_browseData_Click" Content = "Browse" HorizontalAlignment = "Left" Margin = "435,165,0,0" VerticalAlignment = "Top" Width = "75" 
+                FontWeight = "Bold" BorderBrush = "Black" Height="20">
             <Button.Resources >
                 <Style TargetType = "{x:Type Border}" >
                     <Setter Property = "CornerRadius" Value = "5" />
                 </Style >
             </Button.Resources >
         </Button >
-        <TextBox Name = "t_loadState" HorizontalAlignment = "Center" Height = "20" Margin = "0,280,0,0" Text = "" VerticalAlignment = "Top" Width = "250" BorderBrush = "White" FontSize = "15" />
+        <TextBox Name="t_dataLoadState" HorizontalAlignment = "Left" Height = "25" Margin = "30,185,0,0"  Text = "" VerticalAlignment = "Top" Width = "400"
+                 FontSize = "12" BorderBrush = "White"/>
+        
+        
+        <TextBox HorizontalAlignment = "Left" Height = "25" Margin = "30,215,0,0"  Text = "Upload a definitions file (.xml)" VerticalAlignment = "Top" Width = "400"
+                 FontSize = "15" BorderBrush = "White" />
+        <TextBox Name = "t_definitionsFilePath" HorizontalAlignment = "Left" Height = "20" Margin = "30,240,0,0" Text = "" VerticalAlignment = "Top" Width = "400"
+                 FontSize = "15" BorderBrush = "Gray" Background = "LightGray">
+            <TextBox.Resources >
+                <Style TargetType = "{x:Type Border}" >
+                    <Setter Property = "CornerRadius" Value = "5" />
+                </Style >
+            </TextBox.Resources >
+        </TextBox >
+        <Button Name = "b_browseDefinitions" Click = "b_browseDefinitions_Click" Content = "Browse" HorizontalAlignment = "Left" Margin = "435,240,0,0" VerticalAlignment = "Top" Width = "75" 
+                FontWeight = "Bold" BorderBrush = "Black" Height="20">
+            <Button.Resources >
+                <Style TargetType = "{x:Type Border}" >
+                    <Setter Property = "CornerRadius" Value = "5" />
+                </Style >
+            </Button.Resources >
+        </Button >
+        <TextBox Name="t_definitionsLoadState" HorizontalAlignment = "Left" Height = "25" Margin = "30,260,0,0"  Text = "" VerticalAlignment = "Top" Width = "400"
+                 FontSize = "12" BorderBrush = "White"/>
+        
+        
         <Button Name = "b_start" Content = "Start" HorizontalAlignment = "Center" Margin = "0,300,0,0" VerticalAlignment = "Top" Width = "250" Height = "100" FontSize = "75" BorderThickness = "3"
                 BorderBrush = "Black" IsEnabled = "False" Click = "b_start_Click" >
             <Button.Resources >

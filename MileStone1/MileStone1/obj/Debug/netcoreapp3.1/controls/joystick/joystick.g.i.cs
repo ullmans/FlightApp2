@@ -53,7 +53,7 @@ namespace MileStone1.controls.joystick {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MileStone1;V1.0.0.0;component/controls/joystick/joystick.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MileStone1;component/controls/joystick/joystick.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\controls\joystick\joystick.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

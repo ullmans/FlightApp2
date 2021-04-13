@@ -21,29 +21,59 @@ namespace MileStone1 {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        private const string CSV_EXTENTION = ".csv";
-        private const string STATE_GENERATING_SIMULATION = "Generating simulation...";
-        private const string STATE_DONE = "Done!";
+        private readonly string CSV_EXTENTION = ".csv";
+        private readonly string XML_EXTENTION = ".xml";
 
-        private IPlaneViewModel viewModel;
+        private readonly string STATE_LOADING = "Loading...";
+        private readonly string STATE_READY = "Ready!";
+
+        private IFileReadViewModel viewModel;
+
+        private bool dataReadFinished;
+        private bool definitionsReadFinished;
 
         public MainWindow() {
             InitializeComponent();
-            viewModel = new FileReadViewModel(new FileReadModel(new TelentClient()));
-            DataContext = viewModel;
+            viewModel = new FileReadViewModel(new FileReadModel());
+            dataReadFinished = false;
+            definitionsReadFinished = false;
+            viewModel.FileReadFinished += useResults;
         }
 
-        private void b_browse_Click(object sender, RoutedEventArgs e) {
+        private void b_browseData_Click(object sender, RoutedEventArgs e) {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.DefaultExt = ".csv";
+            fileDialog.DefaultExt = CSV_EXTENTION;
             fileDialog.ShowDialog();
-            t_filePath.Text = fileDialog.FileName;
-            viewModel.VM_FilePath = fileDialog.FileName;
-            b_start.IsEnabled = true;
+            t_dataFilePath.Text = fileDialog.FileName;
+            t_dataLoadState.Text = STATE_LOADING;
+            viewModel.DataFilePath = fileDialog.FileName;
+        }
+        private void b_browseDefinitions_Click(object sender, RoutedEventArgs e) {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.DefaultExt = XML_EXTENTION;
+            fileDialog.ShowDialog();
+            t_definitionsFilePath.Text = fileDialog.FileName;
+            t_definitionsLoadState.Text = STATE_LOADING;
+            viewModel.DefinitionsFilePath = fileDialog.FileName;
+        }
+
+        private void useResults(object sender, FileType fileType) {
+            if (sender as IFileReadViewModel == viewModel) {
+                if (fileType == FileType.Data) {
+                    dataReadFinished = true;
+                }
+                if (fileType == FileType.Definitions) {
+                    definitionsReadFinished = true;
+                }
+                if (dataReadFinished && definitionsReadFinished) {
+                    b_start.IsEnabled = true;
+                }
+            }
         }
 
         private void b_start_Click(object sender, RoutedEventArgs e) {
-            viewModel.StartSimulation();
+            DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
+            dataView.Show();
         }
     }
 }

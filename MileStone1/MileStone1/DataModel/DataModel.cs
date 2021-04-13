@@ -31,7 +31,6 @@ namespace MileStone1.dataModel {
         public event IDataModel.UseAttributeUpdate UpdateAttribute;
 
         private int rowIndex;
-
         private double time;
         public double Time {
             get {
@@ -105,6 +104,7 @@ namespace MileStone1.dataModel {
         public void Resume()
         {
             pause = false;
+            Start();
         }
     }
 }
