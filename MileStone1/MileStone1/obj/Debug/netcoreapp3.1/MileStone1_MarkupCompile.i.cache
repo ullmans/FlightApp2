@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
-C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
+C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
 MileStone1
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+<<<<<<< HEAD
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\App.xaml
 51026385524
 
 24140538732
 192-1533232326
 controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\joystick\Joystick.xaml;DataView.xaml;fileRead\MainWindow.xaml;
+=======
+C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\App.xaml
+511517108
+
+211350175962
+192-1533232326
+controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\joystick\joystick.xaml;DataView.xaml;FileRead\MainWindow.xaml;
+>>>>>>> 86231aefe335654bc18822118307057e0280d7cc
 
 False
 

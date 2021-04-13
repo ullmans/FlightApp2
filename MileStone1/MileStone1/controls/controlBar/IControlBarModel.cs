@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-interface IControlBarModel : INotifyPropertyChanged
+public interface IControlBarModel : INotifyPropertyChanged
 {
     bool running { get; set; }
     int lines { get; set; }
