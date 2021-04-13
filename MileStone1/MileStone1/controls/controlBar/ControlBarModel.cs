@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Threading;
 
-class ControlBarModel : IControlBarModel
+public class ControlBarModel : IControlBarModel
 {
     public event PropertyChangedEventHandler PropertyChanged;
 

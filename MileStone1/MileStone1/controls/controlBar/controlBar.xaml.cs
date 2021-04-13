@@ -23,8 +23,11 @@ namespace MileStone1.controls
         public ControlBar()
         {
             InitializeComponent();
-            vm = new ControlBarViewModel(new ControlBarModel(200));
-            DataContext = vm;
+        }
+
+        public void setVM(ControlBarViewModel newVM)
+        {
+            vm = newVM;
             vm.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e)
             {
                 if (e.PropertyName == "VM_position")

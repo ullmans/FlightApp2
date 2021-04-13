@@ -17,6 +17,7 @@ namespace MileStone1 {
     public partial class DataView : Window {
         public DataView() {
             InitializeComponent();
+            control_bar.setVM(new ControlBarViewModel(new ControlBarModel(1000))); // replace 1000 with lines
         }
 
         private void control_bar_Loaded(object sender, RoutedEventArgs e) {
