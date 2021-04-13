@@ -5,13 +5,11 @@ using System.Threading;
 public class ControlBarModel : IControlBarModel
 {
     public event PropertyChangedEventHandler PropertyChanged;
+    private MileStone1.IDataModel mainModel;
 
-    public ControlBarModel(int lines)
+    public ControlBarModel(MileStone1.IDataModel mainModel)
     {
-        this.running = false;
-        this.lines = lines;
-        this.position = 0;
-        this.playSpeed = 1;
+        this.mainModel = mainModel;
     }
 
     public void NotifyPropertyChanged(string propName)
@@ -22,39 +20,38 @@ public class ControlBarModel : IControlBarModel
         }
     }
 
-    private bool Running;
     public bool running
     {
-        get { return this.Running; }
+        get { return mainModel.pause; }
         set
         {
-            if (value != this.Running)
+            if (value != mainModel.pause)
             {
-                this.Running = value;
-                this.NotifyPropertyChanged("Running");
+                mainModel.pause = value;
+                this.NotifyPropertyChanged("running");
             }
         }
     }
 
-    private int Lines, Position;
+    private int Position;
     public int lines
     {
-        get { return this.Lines; }
-        set { if (this.Lines != value)
+        get { return mainModel.lines; }
+        set { if (mainModel.lines != value)
             {
-                this.Lines = value;
-                this.NotifyPropertyChanged("Lines");
+                mainModel.lines = value;
+                this.NotifyPropertyChanged("lines");
             } 
         }
     }
     public int position
     {
-        get { return this.Position; }
+        get { return mainModel.position; }
         set
         {
-            if (this.Position != value)
+            if (mainModel.position != value)
             {
-                this.Position = value;
+                mainModel.position = value;
                 this.NotifyPropertyChanged("position");
             }
         }
