@@ -27,10 +27,9 @@
             <Image Source="../resources/icons/end_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
         <Label Content="Play Speed:" FontSize="25" HorizontalAlignment="Left" Margin="315,45,0,0" VerticalAlignment="Top"/>
-        <TextBlock Name="t_playSpeed" FontSize="50" HorizontalAlignment="Left" Margin="465,25,0,0" Text="1.0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="t_playSpeed" FontSize="50" HorizontalAlignment="Left" Margin="465,25,0,0" Text="{Binding VM_playSpeed}" MaxWidth="65" VerticalAlignment="Top" Width="120"/>
         <Label Content="Progress:" FontSize="25" HorizontalAlignment="Left" Margin="540,45,0,0" VerticalAlignment="Top"/>
         <TextBlock Name="t_progress" FontSize="50" HorizontalAlignment="Left" Margin="665,25,0,0" Text="0%" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <Slider Name="progressBar" Minimum="0" Maximum="{Binding VM_steps}" ValueChanged="SliderValueChanged" HorizontalAlignment="Left" Margin="100,125,0,0" VerticalAlignment="Top" Width="600"/>
-        <Button Name="b_move" Content="move" FontSize="25" HorizontalAlignment="Left" Margin="25,100,0,0" VerticalAlignment="Top" Click="b_move_Click"/>
+        <Slider Name="progressBar" Minimum="0" Maximum="{Binding VM_lines}" ValueChanged="SliderValueChanged" HorizontalAlignment="Left" Margin="100,125,0,0" VerticalAlignment="Top" Width="600"/>
     </Grid>
 </UserControl>

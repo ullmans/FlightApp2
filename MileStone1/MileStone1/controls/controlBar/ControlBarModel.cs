@@ -6,12 +6,12 @@ class ControlBarModel : IControlBarModel
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ControlBarModel(int steps)
+    public ControlBarModel(int lines)
     {
         this.running = false;
-        this.steps = steps;
+        this.lines = lines;
         this.position = 0;
-        this.playSpeed = 10;
+        this.playSpeed = 1;
     }
 
     public void NotifyPropertyChanged(string propName)
@@ -36,14 +36,14 @@ class ControlBarModel : IControlBarModel
         }
     }
 
-    private int Steps, Position, PlaySpeed;
-    public int steps
+    private int Lines, Position;
+    public int lines
     {
-        get { return this.Steps; }
-        set { if (this.Steps != value)
+        get { return this.Lines; }
+        set { if (this.Lines != value)
             {
-                this.Steps = value;
-                this.NotifyPropertyChanged("Steps");
+                this.Lines = value;
+                this.NotifyPropertyChanged("Lines");
             } 
         }
     }
@@ -59,7 +59,9 @@ class ControlBarModel : IControlBarModel
             }
         }
     }
-    public int playSpeed
+
+    private double PlaySpeed;
+    public double playSpeed
     {
         get { return this.PlaySpeed; }
         set
