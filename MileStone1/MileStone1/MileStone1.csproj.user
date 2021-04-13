@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="controls\dataBar\dataBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="controls\joystick\joystick.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="controls\controlBar\controlBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="controls\dataBar\dataBar.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="controls\joystick\joystick.xaml">

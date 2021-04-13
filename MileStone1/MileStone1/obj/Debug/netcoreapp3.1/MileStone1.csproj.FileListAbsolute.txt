@@ -77,3 +77,4 @@ C:\Users\Home\Documents\Tal\bar_ilan\First_Degree\Year_B\Advanced_Programming_2\
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.csprojAssemblyReference.cache
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\controlBar\controlBar.g.cs
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\joystick\joystick.g.cs
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\dataBar\dataBar.g.cs

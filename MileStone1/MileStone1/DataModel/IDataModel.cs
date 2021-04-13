@@ -16,7 +16,7 @@ namespace MileStone1 {
         double Time { get; set; }
         double Speed { get; set; }
 
-        public delegate void UseAttributeUpdate(object sender, string propety, double newValue);
+        public delegate void UseAttributeUpdate(object sender, string property, double newValue);
         public event UseAttributeUpdate UpdateAttribute;
     }
 }
