@@ -4,75 +4,80 @@ using System.Threading;
 
 public class ControlBarModel : IControlBarModel
 {
+    // event for when a property changes
     public event PropertyChangedEventHandler PropertyChanged;
+
+    // connection to main model
     private MileStone1.IDataModel mainModel;
 
+    // constructor
     public ControlBarModel(MileStone1.IDataModel mainModel)
     {
         this.mainModel = mainModel;
     }
 
+    // calls the property changed event
     public void NotifyPropertyChanged(string propName)
     {
         if (this.PropertyChanged != null)
         {
-            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
     }
 
-    public bool running
+    // for each of the properties in the interface if the value is new then the
+    // NotifyPropertyChanged function is called
+    public bool Running
     {
-        get { return mainModel.pause; }
+        get { return mainModel.Paused; }
         set
         {
-            if (value != mainModel.pause)
+            if (value != mainModel.Paused)
             {
-                mainModel.pause = value;
+                mainModel.Paused = value;
                 this.NotifyPropertyChanged("running");
             }
         }
     }
 
-    private int Position;
-    public int lines
+    public int Lines
     {
-        get { return mainModel.lines; }
-        set { if (mainModel.lines != value)
+        get { return mainModel.Lines; }
+        set { if (mainModel.Lines != value)
             {
-                mainModel.lines = value;
+                mainModel.Lines = value;
                 this.NotifyPropertyChanged("lines");
             } 
         }
     }
-    public int position
+    public int Position
     {
-        get { return mainModel.position; }
+        get { return mainModel.Position; }
         set
         {
-            if (mainModel.position != value)
+            if (mainModel.Position != value)
             {
-                mainModel.position = value;
+                mainModel.Position = value;
                 this.NotifyPropertyChanged("position");
             }
         }
     }
 
-    private double PlaySpeed;
-    public double playSpeed
+    public double PlaySpeed
     {
-        get { return this.PlaySpeed; }
+        get { return mainModel.Speed; }
         set
         {
-            if (this.PlaySpeed != value)
+            if (mainModel.Speed != value)
             {
-                this.PlaySpeed = value;
+                mainModel.Speed = value;
                 this.NotifyPropertyChanged("playSpeed");
             }
         }
     }
  
-    public void move()
+    public void Move()
     {
-        this.position++;
+        this.Position++;
     }
 }

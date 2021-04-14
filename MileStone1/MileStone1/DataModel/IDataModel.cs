@@ -15,9 +15,9 @@ namespace MileStone1 {
         //timing
         double Time { get; set; }
         double Speed { get; set; }
-        bool pause { get; set; }
-        int lines { get; set; }
-        int position { get; set; }
+        bool Paused { get; set; }
+        int Lines { get; set; }
+        int Position { get; set; }
 
         public delegate void UseAttributeUpdate(object sender, string property, double newValue);
         public event UseAttributeUpdate UpdateAttribute;
