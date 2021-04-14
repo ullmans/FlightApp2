@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 
-// control bar view model
 
 namespace MileStone1 {
-	public class ControlBarViewModel : INotifyPropertyChanged {
+	public class ControlBarViewModel : IControlBarViewModel {
 		// event for when a property is changed
 		public event PropertyChangedEventHandler PropertyChanged;
 		// the control bar's model
