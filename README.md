@@ -30,6 +30,15 @@ ControlBarViewModel.cs is the Control Bar's view model which is observed by the 
 ControlBarModel.cs is the Control Bar's model which is obseved by the view model.
 
 ### Data Bar
+The databar is a dash Board that display some flight data of the plane.
+The dash board contain:
+1. Altimeter
+2. Air speed
+3. Flight direction ("heading")
+4. Pitch
+5. Roll
+6. Yaw
+We built it as a UserControl and with the MVVM design pattern, so the view and the model does not know each other.
 
 ### Joystick
 
