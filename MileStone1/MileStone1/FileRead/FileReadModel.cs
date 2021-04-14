@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Text;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 //using ICSharpCode.AvalonEdit.Utils;
-using Microsoft.VisualBasic.FileIO;
 using System.ComponentModel;
 
 namespace MileStone1 

@@ -7,8 +7,8 @@
             mc:Ignorable="d" 
             d:DesignHeight="650" d:DesignWidth="1000">
     <Grid>
-        <Slider x:Name="slider1" Height="340" Margin="240,70,0,0" Width="20"  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Orientation="Vertical" IsEnabled="False">
+        <Slider x:Name="s_throttle" Height="340" Margin="240,70,0,0" Width="20"  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Orientation="Vertical" IsEnabled="False" Minimum="0" Maximum="1" Value="{Binding VM_throttle}">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="5" ScaleY="1"/>
@@ -22,8 +22,8 @@
                  Background="Transparent" FontSize="50" TextAlignment="Center" BorderBrush="Transparent"/>
         
         
-        <Slider x:Name="slider2" Height="20" Margin="400,470,0,0" Width="340"  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Orientation="Horizontal" IsEnabled="False">
+        <Slider x:Name="s_rudder" Height="20" Margin="400,470,0,0" Width="340"  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Orientation="Horizontal" IsEnabled="False" Minimum="-1" Maximum="1" Value="{Binding VM_rudder}">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" ScaleY="5"/>
