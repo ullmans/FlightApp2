@@ -41,7 +41,7 @@ namespace MileStone1.controls.dataBar
                 }
                 else if (property.Equals("heading-deg"))
                 {
-                    rudder = newValue;
+                    heading = newValue;
                 }
                 else if (property.Equals("pitch-deg"))
                 {
@@ -72,11 +72,11 @@ namespace MileStone1.controls.dataBar
             set { airSpeed = value; }
         }
 
-        private double rudder;
-        public double Rudder
+        private double heading;
+        public double Heading
         {
-            get { return rudder; }
-            set { rudder = value; }
+            get { return heading; }
+            set { heading = value; }
         }
 
         private double pitch;

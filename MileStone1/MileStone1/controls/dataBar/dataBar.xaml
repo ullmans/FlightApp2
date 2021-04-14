@@ -31,7 +31,7 @@
 
             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Altimeter}"  Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
             <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding AirSpeed}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
-            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding AngleFromNorth}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Heading}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
             <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Pitch}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
             <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding Roll}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
             <TextBlock Grid.Row="3" Grid.Column="3" Text="{Binding Yaw}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
