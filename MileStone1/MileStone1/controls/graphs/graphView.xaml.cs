@@ -143,7 +143,7 @@ namespace ex1Exam2
         }
 
         //when button is clicked we need to change graph
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(Object sender, RoutedEventArgs e)
         {
             string number = ((Button)sender).Name.Split("Button")[1];
             int choose = Int32.Parse(number);

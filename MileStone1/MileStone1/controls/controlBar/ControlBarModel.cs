@@ -42,22 +42,16 @@ public class ControlBarModel : IControlBarModel
 
     public int Lines
     {
-        get { return mainModel.Lines; }
-        set { if (mainModel.Lines != value)
-            {
-                mainModel.Lines = value;
-                this.NotifyPropertyChanged("lines");
-            } 
-        }
+        get { return (int)mainModel.GetSimulationTime(); }
     }
     public int Position
     {
-        get { return mainModel.Position; }
+        get { return (int)mainModel.Time; }
         set
         {
-            if (mainModel.Position != value)
+            if (mainModel.Time != value)
             {
-                mainModel.Position = value;
+                mainModel.Time = value;
                 this.NotifyPropertyChanged("position");
             }
         }

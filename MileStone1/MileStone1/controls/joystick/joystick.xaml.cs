@@ -23,6 +23,7 @@ namespace MileStone1 {
                 viewModel = newViewModel;
                 viewModel.PropertyChanged +=
                     delegate (Object sender, PropertyChangedEventArgs e) {
+                        // set joystick position by property
                         string property = e.PropertyName;
                         if (e.Equals("VM_aileron")) {
                             Canvas.SetLeft(Knob, PropertToJoystickPosition(viewModel.VM_aileron));
@@ -34,6 +35,7 @@ namespace MileStone1 {
             DataContext = viewModel;
         }
 
+        // linear transformation from range [PROPERTY_MIN,PROPERTY_MAX] to [0,JOYSTICK_SIZE]
         private int PropertToJoystickPosition(double value) {
             return (int)((value - PROPERTY_MIN) * JOYSTICK_SIZE / (PROPERTY_MAX - PROPERTY_MIN));
         }
