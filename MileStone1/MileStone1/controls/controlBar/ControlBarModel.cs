@@ -4,14 +4,19 @@ using System.Threading;
 
 public class ControlBarModel : IControlBarModel
 {
+    // event for when a property changes
     public event PropertyChangedEventHandler PropertyChanged;
+
+    // connection to main model
     private MileStone1.IDataModel mainModel;
 
+    // constructor
     public ControlBarModel(MileStone1.IDataModel mainModel)
     {
         this.mainModel = mainModel;
     }
 
+    // calls the property changed event
     public void NotifyPropertyChanged(string propName)
     {
         if (this.PropertyChanged != null)
@@ -20,6 +25,8 @@ public class ControlBarModel : IControlBarModel
         }
     }
 
+    // for each of the properties in the interface if the value is new then the
+    // NotifyPropertyChanged function is called
     public bool running
     {
         get { return mainModel.pause; }
@@ -33,7 +40,6 @@ public class ControlBarModel : IControlBarModel
         }
     }
 
-    private int Position;
     public int lines
     {
         get { return mainModel.lines; }
@@ -57,21 +63,20 @@ public class ControlBarModel : IControlBarModel
         }
     }
 
-    private double PlaySpeed;
     public double playSpeed
     {
-        get { return this.PlaySpeed; }
+        get { return mainModel.Speed; }
         set
         {
-            if (this.PlaySpeed != value)
+            if (mainModel.Speed != value)
             {
-                this.PlaySpeed = value;
+                mainModel.Speed = value;
                 this.NotifyPropertyChanged("playSpeed");
             }
         }
     }
  
-    public void move()
+    public void Move()
     {
         this.position++;
     }
