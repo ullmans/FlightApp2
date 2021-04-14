@@ -11,7 +11,7 @@ public interface IControlBarModel : INotifyPropertyChanged
     // line in flight file the flight display is showing
     int Position { get; set; }
     // the speed at which the flight display is running
-    double PlaySpeed { get; set; }
+    double PlaySpeed { get; }
 
     // updates control bar after moving to next line in flight file
     void Move();
