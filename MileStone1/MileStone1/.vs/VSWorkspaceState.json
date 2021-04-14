@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\controls",
+    "\\controls\\dataBar",
+    "\\controls\\joystick"
   ],
-  "SelectedNode": "\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }
