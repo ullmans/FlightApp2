@@ -18,7 +18,7 @@ namespace MileStone1.controls
     public partial class ControlBar : UserControl
     {
         // the control bar's view model
-        private ControlBarViewModel vm;
+        private IControlBarViewModel vm;
 
         // constructor
         public ControlBar()
@@ -27,7 +27,7 @@ namespace MileStone1.controls
         }
 
         // sets the control bar's view model
-        public void SetVM(ControlBarViewModel newVM)
+        public void SetVM(IControlBarViewModel newVM)
         {
             vm = newVM;
             // adds delegate function to view model that updates the slider's value
