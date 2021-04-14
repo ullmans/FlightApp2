@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\4royt\\.nuget\\packages\\": {}
+    "C:\\Users\\ullmans\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\4royt\\Documents\\AdvancedProg2\\firstMilestone\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+      "projectUniqueName": "C:\\Users\\ullmans\\OneDrive\\Toar\\AdvancedProgramming2\\ex1last\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
       "projectName": "MileStone1",
-      "projectPath": "C:\\Users\\4royt\\Documents\\AdvancedProg2\\firstMilestone\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
-      "packagesPath": "C:\\Users\\4royt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\4royt\\Documents\\AdvancedProg2\\firstMilestone\\FlightApp2\\MileStone1\\MileStone1\\obj\\",
+      "projectPath": "C:\\Users\\ullmans\\OneDrive\\Toar\\AdvancedProgramming2\\ex1last\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+      "packagesPath": "C:\\Users\\ullmans\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ullmans\\OneDrive\\Toar\\AdvancedProgramming2\\ex1last\\FlightApp2\\MileStone1\\MileStone1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\4royt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ullmans\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

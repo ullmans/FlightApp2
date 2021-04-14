@@ -14,33 +14,76 @@ namespace MileStone1
 {
     class FileReadModel: IFileReadModel
     {
-        bool stop;
-        ITelnetClient telnetClient;
+        //bool stop;
+        //ITelnetClient telnetClient;
         List<double[]> dataLogCSV;
         List<string> props; //properties
-        public event PropertyChangedEventHandler PropertyChanged;
+        double sampleRate;  //number of kines in one second
+        //public event PropertyChangedEventHandler PropertyChanged;     ????
+        public event IFileReadModel.UseResult FileReadFinished;
+
 
         public FileReadModel(ITelnetClient tc)
         {
-            this.telnetClient = tc;
-            stop = false;
-            dataLogCSV = new List<double[]>();
-            props = new List<string>();
+            //this.telnetClient = tc;
+            //stop = false;
+            dataLogCSV = new List<double[]>();  //save the lines of the csv file
+            props = new List<string>(); 
         }
-        public void ReadDataFile(string filePath)
+        public void ReadFile(string filePath, FileType fileType)
         {
-            using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
+            if (fileType == FileType.Data)  //CSV file
             {
-                string line;
-                while ((line = connectionReader.ReadLine()) != null)
+                using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
                 {
-                    string[] splittedLine = line.Split(',');
-                    double[] lineInNumbers = new double[splittedLine.Length];
-                    for (int i = 0; i < splittedLine.Length; ++i)
+                    string line;
+                    while ((line = connectionReader.ReadLine()) != null)
                     {
-                        lineInNumbers[i] = double.Parse(splittedLine[i]);
+                        string[] splittedLine = line.Split(',');
+                        double[] lineInNumbers = new double[splittedLine.Length];
+                        for (int i = 0; i < splittedLine.Length; ++i)
+                        {
+                            lineInNumbers[i] = double.Parse(splittedLine[i]);
+                        }
+                        dataLogCSV.Add(lineInNumbers);
                     }
                 }
+                this.ReadyToUseResult(fileType);
+            } 
+            else if (fileType == FileType.Definitions)  //xaml file
+            {
+                using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
+                {
+                    string line;
+                    bool isSampleRateFound = false;
+                    while ((line = connectionReader.ReadLine()) != null)
+                    {
+                        string[] splittedLine = line.Split('>');
+                        if (splittedLine[0].Equals("<name"))
+                        {
+                            props.Add((splittedLine[1].Split('<'))[0]);
+                        }
+                        if (!isSampleRateFound)
+                        {
+                            string[] findSampleRate = line.Split(':');
+                            if (findSampleRate[0].Equals("Recording"))
+                            {
+                                this.sampleRate = double.Parse(((findSampleRate[1]).Split(','))[2]);
+                                isSampleRateFound = true;
+                            }
+                        }
+                    }
+                }
+                this.ReadyToUseResult(fileType);
+            }
+        }
+
+        //a func like NotifyPropertyChanged for the UseRedultEvent....
+        public void ReadyToUseResult(FileType fileType)
+        {
+            if(this.FileReadFinished != null)
+            {
+                this.FileReadFinished(this, fileType);
             }
         }
 
@@ -48,8 +91,13 @@ namespace MileStone1
         {
             return dataLogCSV;
         }
+        public double GetSampleRate()   //what that func do?
+        {
+            return 2.0; 
+        }
 
-        public void ReadDefinitionFile(string filePath)
+
+        /*public void ReadDefinitionFile(string filePath, FileType fileType)
         {
             using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
             {
@@ -63,14 +111,15 @@ namespace MileStone1
                     }
                 }
             }
-        }
+            this.ReadyToUseResult(fileType);
+        }*/
         public List<string> GetDefinitions()
         {
             return this.props;
         }
 
 
-        public void Connect(string ip, int port)
+        /*public void Connect(string ip, int port)
         {
             this.telnetClient.Connect(ip, port);
         }
@@ -79,9 +128,9 @@ namespace MileStone1
         {
             stop = true;
             telnetClient.Disconnect();
-        }
+        }*/
 
-        public void Start(string path)
+        /*public void Start(string path)
         {
             new Thread(delegate () 
             {
@@ -99,15 +148,16 @@ namespace MileStone1
                     }
                 }
             }).Start();
-        }
+        }*/
 
-
+        /*
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-        }
+        }*/
 
+        /*
         //the properties of the plane
         private double height;
         public double Height
@@ -178,6 +228,6 @@ namespace MileStone1
                 playSpeed = value;
                 NotifyPropertyChanged("playSpeed");
             }
-        }
+        }*/
     }
 }

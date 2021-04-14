@@ -31,27 +31,27 @@ namespace MileStone1.controls.dataBar
         {
             if (sender as IDataModel == model)
             {
-                if (property.Equals("altimeter"))
+                if (property.Equals("altimeter_indicated-altitude-ft"))
                 {
                     altimeter = newValue;
                 }
-                else if (property.Equals("airSpeed"))
+                else if (property.Equals("airspeed-kt"))
                 {
                     airSpeed = newValue;
                 }
-                else if (property.Equals("rudder")) //כיוון
+                else if (property.Equals("heading-deg"))
                 {
                     rudder = newValue;
                 }
-                else if (property.Equals("Pitch"))
+                else if (property.Equals("pitch-deg"))
                 {
                     pitch = newValue;
                 }
-                else if (property.Equals("Roll"))
+                else if (property.Equals("roll-deg"))
                 {
                     roll = newValue;
                 }
-                else if (property.Equals("Yaw"))
+                else if (property.Equals("side-slip-deg"))
                 {
                     yaw = newValue;
                 }
