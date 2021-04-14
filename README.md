@@ -49,3 +49,16 @@ in addition, the graph show the most pearson data.
 graphView.xaml and graphView.xaml.cs is the view- they create and show the buttons and the graph.
 graphViewModel.cs is the view model that control everything.
 graphModel.cs is the model that calculate the graph need to be shown
+
+
+## Using the Application
+anyone who want to use our application, must download FlightGear. You can download Flightgear here: https://www.flightgear.org/download/
+after download FlightGear, open it. You need to enter some definitions to it.
+open the cmd, and write there:
+--generic=socket,in,10,127.0.0.1,5400,tcp,playback_small
+--fdm=null
+this will be enough for first using th eapplication. for more Features, look here:https://www.flightgear.org/
+now, you can run the application in the cmd (you need to compile before trying to run it), or open your IDE (we recommend visual studio), build the app, and run it.
+
+## UML diagram
+you can find here a UML diagram of our project: https://github.com/ullmans/FlightApp2/blob/main/UML%20Diagram.pdf
