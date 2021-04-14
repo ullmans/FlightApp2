@@ -11,13 +11,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MileStone1.controls.joystick {
+namespace MileStone1 {
     /// <summary>
     /// Interaction logic for joystick.xaml
     /// </summary>
-    public partial class joystick : UserControl {
-        public joystick() {
+    public partial class Joystick : UserControl {
+        private IJoystickViewModel viewModel;
+
+        public Joystick() {
             InitializeComponent();
+        }
+
+        public void SetViewModel(IJoystickViewModel newViewModel) {
+            if (viewModel == null) {
+                viewModel = newViewModel;
+            }
+            DataContext = viewModel;
         }
     }
 }

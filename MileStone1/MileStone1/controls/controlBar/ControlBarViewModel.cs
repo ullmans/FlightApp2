@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-class ControlBarViewModel : INotifyPropertyChanged
+public class ControlBarViewModel : INotifyPropertyChanged
 {
 	public event PropertyChangedEventHandler PropertyChanged;
 	private ControlBarModel model;

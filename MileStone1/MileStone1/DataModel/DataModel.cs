@@ -5,7 +5,7 @@ using System.Threading;
 using System.ComponentModel;
 
 namespace MileStone1.dataModel {
-    class DataModel : IDataModel {
+    public class DataModel : IDataModel {
         private const int MILLISECONDS_IN_A_SECOND = 1000;
         // data lines per second (constant default value)
         private int sampleRate;
@@ -16,7 +16,19 @@ namespace MileStone1.dataModel {
         private List<double[]> data;
         private List<string> definitions;
 
-        private bool pause, stop;
+        private bool _pause, stop;
+
+        public bool pause
+        {
+            get { return _pause; }
+            set
+            {
+                if (_pause != value)
+                {
+                    _pause = value;
+                }
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -31,6 +43,19 @@ namespace MileStone1.dataModel {
         public event IDataModel.UseAttributeUpdate UpdateAttribute;
 
         private int rowIndex;
+        public int position
+        {
+            get { return position; }
+            set
+            {
+                if (rowIndex != value)
+                {
+                    rowIndex = value;
+                    NotifyPropertyChanged("Position");
+                }
+            }
+        }
+
         private double time;
         public double Time {
             get {
@@ -77,7 +102,7 @@ namespace MileStone1.dataModel {
         public void Start() {
             new Thread(delegate () {
                 int numberOfSamples = data.Count;
-                int numberOfAttributes = data[0].Length;
+                int numberOfAttributes = _lines = data[0].Length;
                 while (!stop && !pause && rowIndex < numberOfSamples) {
                     for (int colIndex = 0; colIndex < numberOfAttributes; ++colIndex)
                     {
@@ -89,6 +114,20 @@ namespace MileStone1.dataModel {
                     Time += (double)lineDelayInMillis / MILLISECONDS_IN_A_SECOND;
                 }
             }).Start();
+        }
+
+        private int _lines;
+        public int lines
+        {
+            get { return _lines; }
+            set
+            {
+                if (_lines != value)
+                {
+                    _lines = value;
+                    NotifyPropertyChanged("lines");
+                }
+            }
         }
 
         public void Stop()
