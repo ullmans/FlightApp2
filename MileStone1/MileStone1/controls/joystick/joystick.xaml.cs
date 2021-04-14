@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.ComponentModel;
+
 
 namespace MileStone1 {
     /// <summary>
     /// Interaction logic for joystick.xaml
     /// </summary>
     public partial class Joystick : UserControl {
+        private readonly int JOYSTICK_SIZE = 250;
+        private readonly int PROPERTY_MIN = -1;
+        private readonly int PROPERTY_MAX = 1;
+
         private IJoystickViewModel viewModel;
 
         public Joystick() {
@@ -25,8 +21,21 @@ namespace MileStone1 {
         public void SetViewModel(IJoystickViewModel newViewModel) {
             if (viewModel == null) {
                 viewModel = newViewModel;
+                viewModel.PropertyChanged +=
+                    delegate (Object sender, PropertyChangedEventArgs e) {
+                        string property = e.PropertyName;
+                        if (e.Equals("VM_aileron")) {
+                            Canvas.SetLeft(Knob, PropertToJoystickPosition(viewModel.VM_aileron));
+                        } else if (e.Equals("VM_elevator")) {
+                            Canvas.SetBottom(Knob, PropertToJoystickPosition(viewModel.VM_elevator));
+                        }
+                    };
             }
             DataContext = viewModel;
+        }
+
+        private int PropertToJoystickPosition(double value) {
+            return (int)((value - PROPERTY_MIN) * JOYSTICK_SIZE / (PROPERTY_MAX - PROPERTY_MIN));
         }
     }
 }
