@@ -29,6 +29,10 @@ namespace MileStone1.controls {
                             this.Dispatcher.Invoke(() =>
                             {
                                 Canvas.SetLeft(Knob, PropertToJoystickPosition(viewModel.VM_aileron));
+                                if (PropertToJoystickPosition(viewModel.VM_aileron) != 125) {
+                                    throw new Exception(PropertToJoystickPosition(viewModel.VM_aileron).ToString());
+                                }
+                                
                             });
                         } else if (property.Equals("VM_elevator")) {
                             this.Dispatcher.Invoke(() =>
@@ -43,7 +47,7 @@ namespace MileStone1.controls {
 
         // linear transformation from range [PROPERTY_MIN,PROPERTY_MAX] to [0,JOYSTICK_SIZE]
         private int PropertToJoystickPosition(double value) {
-            return (int)((value - PROPERTY_MIN) * JOYSTICK_SIZE / (PROPERTY_MAX - PROPERTY_MIN));
+            return (int)((10 * value - PROPERTY_MIN) * JOYSTICK_SIZE / (PROPERTY_MAX - PROPERTY_MIN));
         }
     }
 }
