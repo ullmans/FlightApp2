@@ -13,7 +13,7 @@
     <Compile Update="controls\joystick\joystick.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="DataView.xaml.cs">
+    <Compile Update="controls\controlBar\DataView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,7 +27,7 @@
     <Page Update="controls\joystick\joystick.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="DataView.xaml">
+    <Page Update="controls\controlBar\DataView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="fileRead\MainWindow.xaml">

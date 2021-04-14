@@ -4,30 +4,26 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
-=======
-C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
->>>>>>> 3ad5416075e7ac4a2eb14e5d2856d1486cfb8365
+C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
 MileStone1
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 <<<<<<< HEAD
-C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\App.xaml
-51703708849
-
-23-24032017
-1921654412462
-controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\joystick\joystick.xaml;DataView.xaml;FileRead\MainWindow.xaml;
-=======
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\App.xaml
-51026385524
+5-571673325
 
-22-645511905
+221185976556
 192-1533232326
-controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\joystick\Joystick.xaml;DataView.xaml;fileRead\MainWindow.xaml;
->>>>>>> 3ad5416075e7ac4a2eb14e5d2856d1486cfb8365
+controls\controlBar\controlBar.xaml;controls\controlBar\DataView.xaml;controls\dataBar\dataBar.xaml;controls\joystick\Joystick.xaml;fileRead\MainWindow.xaml;
+=======
+C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\App.xaml
+511517108
 
-True
+22-1810823188
+192-1533232326
+controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\joystick\joystick.xaml;DataView.xaml;FileRead\MainWindow.xaml;
+>>>>>>> dd41c6a798b5bb7abbcbfdc07b8174441b5fd871
+
+False
 

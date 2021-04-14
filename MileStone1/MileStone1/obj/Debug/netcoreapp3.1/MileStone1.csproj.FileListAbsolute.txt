@@ -81,3 +81,10 @@ C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\Mile
 C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.pdb
 >>>>>>> 86231aefe335654bc18822118307057e0280d7cc
 >>>>>>> 04feebc279c9420be2d14414df160be85e0b0bb2
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\dataView\DataView.g.cs
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\controlBar\controlBar.baml
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\dataBar\dataBar.baml
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\joystick\Joystick.baml
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\dataView\DataView.baml
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\controlBar\DataView.g.cs
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\controlBar\DataView.baml

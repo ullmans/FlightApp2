@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace MileStone1 
 {
-    class FileReadModel: IFileReadModel
+    class FileReadModel/*: IFileReadModel*/
     {
         //bool stop;
         //ITelnetClient telnetClient;

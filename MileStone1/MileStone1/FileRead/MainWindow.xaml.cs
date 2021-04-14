@@ -34,7 +34,7 @@ namespace MileStone1 {
 
         public MainWindow() {
             InitializeComponent();
-            viewModel = new FileReadViewModel(new FileReadModel());
+            //viewModel = new FileReadViewModel(new FileReadModel());
             dataReadFinished = false;
             definitionsReadFinished = false;
             viewModel.FileReadFinished += useResults;
@@ -72,8 +72,8 @@ namespace MileStone1 {
         }
 
         private void b_start_Click(object sender, RoutedEventArgs e) {
-            DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
-            dataView.Show();
+            //DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
+            //dataView.Show();
         }
     }
 }
