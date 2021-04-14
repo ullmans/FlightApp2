@@ -16,14 +16,14 @@ namespace MileStone1.controls.dataBar {
     /// Interaction logic for dataBar.xaml
     /// </summary>
     public partial class DataBar : UserControl {
-        private DataBarViewModel dbvm;
+        private IDataBarViewModel dbvm;
         public DataBar() {
             InitializeComponent();
         }
 
-        public void SetVM(IDataModel model)
+        public void SetVM(IDataBarViewModel vm)
         {
-            dbvm =  new DataBarViewModel(model);    //IDataViewModel
+            dbvm = vm;    //IDataBarViewModel
             DataContext = dbvm;
         }
     }

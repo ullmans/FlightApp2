@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MileStone1.controls.dataBar
 {
-    interface IDataBarViewModel
+    public interface IDataBarViewModel
     {
         public double Altimeter{get; set; }
         public double Airspeed{get; set; }
