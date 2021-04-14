@@ -32,3 +32,10 @@ ControlBarModel.cs is the Control Bar's model which is obseved by the view model
 ### Data Bar
 
 ### Joystick
+
+### graph
+thr graph is present a chosen data from the csv code and show a graph of the values- (the values in csv is y_exis and the time is x_exis).
+in addition, the graph show the most pearson data.
+graphView.xaml and graphView.xaml.cs is the view- they create and show the buttons and the graph.
+graphViewModel.cs is the view model that control everything.
+graphModel.cs is the model that calculate the graph need to be shown
