@@ -9,7 +9,7 @@ namespace MileStone1 {
         public void ReadFile(string filePath, FileType fileType);  //done
 
         public List<double[]> GetDataLog(); //done
-        public double GetSampleRate();
+        public double GetSampleRate();  //waht is that func??
         public List<string> GetDefinitions();   //done
 
         public delegate void UseResult(object sender, FileType fileType);
