@@ -8,7 +8,7 @@ namespace MileStone1 {
 
         public FileReadViewModel(IFileReadModel model) {
             this.model = model;
-            this.model.FileReadFinished += useResult;
+            this.model.FileReadFinished += UseResult;
         }
 
         public event IFileReadViewModel.UseResult FileReadFinished;
