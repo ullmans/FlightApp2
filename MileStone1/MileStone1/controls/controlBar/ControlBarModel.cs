@@ -21,7 +21,7 @@ public class ControlBarModel : IControlBarModel
     {
         if (this.PropertyChanged != null)
         {
-            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
     }
 
@@ -29,12 +29,12 @@ public class ControlBarModel : IControlBarModel
     // NotifyPropertyChanged function is called
     public bool Running
     {
-        get { return mainModel.pause; }
+        get { return mainModel.Paused; }
         set
         {
-            if (value != mainModel.pause)
+            if (value != mainModel.Paused)
             {
-                mainModel.pause = value;
+                mainModel.Paused = value;
                 this.NotifyPropertyChanged("running");
             }
         }
@@ -42,22 +42,22 @@ public class ControlBarModel : IControlBarModel
 
     public int Lines
     {
-        get { return mainModel.lines; }
-        set { if (mainModel.lines != value)
+        get { return mainModel.Lines; }
+        set { if (mainModel.Lines != value)
             {
-                mainModel.lines = value;
+                mainModel.Lines = value;
                 this.NotifyPropertyChanged("lines");
             } 
         }
     }
     public int Position
     {
-        get { return mainModel.position; }
+        get { return mainModel.Position; }
         set
         {
-            if (mainModel.position != value)
+            if (mainModel.Position != value)
             {
-                mainModel.position = value;
+                mainModel.Position = value;
                 this.NotifyPropertyChanged("position");
             }
         }
