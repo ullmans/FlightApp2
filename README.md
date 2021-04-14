@@ -37,7 +37,7 @@ The dash board contain:
 3. Flight direction ("heading")
 4. Pitch
 5. Roll
-6. Yaw
+6. Yaw 
 We built it as a UserControl and with the MVVM design pattern, so the view and the model does not know each other.
 
 ### Joystick
