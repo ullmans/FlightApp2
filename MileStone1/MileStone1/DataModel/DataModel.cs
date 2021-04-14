@@ -22,7 +22,7 @@ namespace MileStone1 {
             this.telnetClient = telnetClient;
             this.data = data;
             this.definitions = definitions;
-            this.sampleRate = sampleRate;
+            this.sampleRate = 100;
             lineDelayInMillis = (int)(MILLISECONDS_IN_A_SECOND / sampleRate);
             Time = 0;
             Speed = 1;
