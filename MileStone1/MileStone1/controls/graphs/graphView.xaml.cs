@@ -147,8 +147,8 @@ namespace ex1Exam2
         {
             string number = ((Button)sender).Name.Split("Button")[1];
             int choose = Int32.Parse(number);
-            //this.dviewmodel.updateDots(choose);
-            this.dviewmodel.updateDots(0);
+            this.dviewmodel.updateDots(choose);
+            //this.dviewmodel.updateDots(0);
             pearson.Content = buttonsNames[dviewmodel.Pearson];
         }
 
