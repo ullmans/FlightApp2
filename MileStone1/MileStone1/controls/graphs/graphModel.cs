@@ -5,7 +5,6 @@ using System.Windows.Controls;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Shapes;
-using detection;
 
 
 
@@ -14,6 +13,7 @@ using detection;
  * save a canvas and calculate dots
  * 
  */
+/*
 public class graphModel : INotifyPropertyChanged
 {
 
@@ -193,3 +193,4 @@ public class graphModel : INotifyPropertyChanged
 		return pc;
 	}
 }
+*/

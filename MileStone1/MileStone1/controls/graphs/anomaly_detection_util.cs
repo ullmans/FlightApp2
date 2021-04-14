@@ -2,12 +2,11 @@
 using System.Windows;
 using System.Windows.Shapes;
 using System.Windows.Media;
-using ex1Exam2;
 
 /**
  * the function from the first ex
  */
-namespace detection {
+namespace MileStone1 {
 	public class anomaly_detection_util {
 
 		public static float avg(float[] x, int size)

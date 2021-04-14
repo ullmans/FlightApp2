@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading;
 using System.ComponentModel;
 
-namespace MileStone1.dataModel {
+namespace MileStone1 {
     public class DataModel : IDataModel {
         private const int MILLISECONDS_IN_A_SECOND = 1000;
         // data lines per second (constant default value)
@@ -93,7 +93,7 @@ namespace MileStone1.dataModel {
         public void Start() {
             new Thread(delegate () {
                 int numberOfSamples = data.Count;
-                int numberOfAttributes = lines = data[0].Length;
+                int numberOfAttributes = data[0].Length;
                 while (!stop && !paused && rowIndex < numberOfSamples) {
                     // send updates about line value one by one
                     for (int colIndex = 0; colIndex < numberOfAttributes; ++colIndex) {

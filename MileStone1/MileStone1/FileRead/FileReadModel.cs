@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace MileStone1 
 {
-    class FileReadModel/*: IFileReadModel*/
+    class FileReadModel : IFileReadModel
     {
         //bool stop;
         //ITelnetClient telnetClient;
@@ -19,7 +19,7 @@ namespace MileStone1
         public event IFileReadModel.UseResult FileReadFinished;
 
 
-        public FileReadModel(ITelnetClient tc)
+        public FileReadModel()
         {
             //this.telnetClient = tc;
             //stop = false;
@@ -44,6 +44,7 @@ namespace MileStone1
                         dataLogCSV.Add(lineInNumbers);
                     }
                 }
+                
                 this.ReadyToUseResult(fileType);
             } 
             else if (fileType == FileType.Definitions)  //xaml file
@@ -55,7 +56,8 @@ namespace MileStone1
                     while ((line = connectionReader.ReadLine()) != null)
                     {
                         string[] splittedLine = line.Split('>');
-                        if (splittedLine[0].Equals("<name"))
+
+                        if (splittedLine[0].Replace(" ", String.Empty).Equals("<name"))
                         {
                             props.Add((splittedLine[1].Split('<'))[0]);
                         }

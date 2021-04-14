@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
+/*
 namespace ex1Exam2
 {
     /// <summary>
@@ -219,5 +219,6 @@ namespace ex1Exam2
         }
 
     }
+    
 
-}
+}*/

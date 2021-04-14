@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using Microsoft.Win32;
 using System.Collections.Generic;
+using System;
 
 namespace MileStone1 {
     class FileReadViewModel : IFileReadViewModel {
@@ -56,7 +57,7 @@ namespace MileStone1 {
         }
 
         public void UseResult(Object sender, FileType fileType) {
-            if (sender as IFileReadModel == model && FileReadFinished != null) {
+            if (FileReadFinished != null) {
                 FileReadFinished(this, fileType);
             }
         }

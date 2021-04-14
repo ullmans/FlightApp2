@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 
-namespace MileStone1.controls.dataBar
+namespace MileStone1
 {
-    class DataBarViewModel //:  INotifyPropertyChanged
+    class DataBarViewModel : IDataBarViewModel//:  INotifyPropertyChanged
     {
         //public event PropertyChangedEventHandler PropertyChanged;
         public IDataModel model;

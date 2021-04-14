@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\App.xaml
-5-15812547
+61503096826
 
-28-55659326
+30-1074387978
 192-1533232326
-controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\graphs\graphView.xaml;controls\joystick\joystick.xaml;fileRead\MainWindow.xaml;
+controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\graphs\graphView.xaml;controls\joystick\joystick.xaml;dataView\DataView.xaml;fileRead\MainWindow.xaml;
 
 False
 

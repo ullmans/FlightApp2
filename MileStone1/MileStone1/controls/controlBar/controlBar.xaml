@@ -8,7 +8,7 @@
 
     <Grid>
         <Button Name="b_start" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Click="B_start_Click">
-            <Image Source="pack://application:,,,/resources/icons/start_icon.png" Width="40" Height="40" Stretch="Fill"/>
+            <Image Source="\MileStone1;component\resources\icons\start_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
         <Button Name="b_slowDown" HorizontalAlignment="Left" Margin="60,35,0,0" VerticalAlignment="Top" Click="B_slowDown_Click">
             <Image Source="/MileStone1;component/resources/icons/slow_down_icon.png" Width="40" Height="40" Stretch="Fill"/>

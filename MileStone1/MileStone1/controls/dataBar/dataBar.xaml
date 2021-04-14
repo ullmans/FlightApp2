@@ -1,9 +1,8 @@
-﻿<UserControl x:Class="MileStone1.controls.dataBar.DataBar"
+﻿<UserControl x:Class="MileStone1.controls.DataBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MileStone1.controls.dataBar"
              mc:Ignorable="d" d:DesignWidth="800" Height="300">
 
     <Border Background="White" BorderBrush="Black" BorderThickness="7,7,7,7" CornerRadius="30,30,30,30">

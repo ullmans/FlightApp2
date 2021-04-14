@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MileStone1.controls.dataBar {
+namespace MileStone1.controls {
     /// <summary>
     /// Interaction logic for dataBar.xaml
     /// </summary>

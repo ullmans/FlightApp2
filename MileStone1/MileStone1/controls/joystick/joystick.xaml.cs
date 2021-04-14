@@ -3,7 +3,7 @@ using System.Windows.Controls;
 using System.ComponentModel;
 
 
-namespace MileStone1 {
+namespace MileStone1.controls {
     /// <summary>
     /// Interaction logic for joystick.xaml
     /// </summary>
@@ -18,17 +18,23 @@ namespace MileStone1 {
             InitializeComponent();
         }
 
-        public void SetViewModel(IJoystickViewModel newViewModel) {
+        public void SetVM(IJoystickViewModel newViewModel) {
             if (viewModel == null) {
                 viewModel = newViewModel;
                 viewModel.PropertyChanged +=
                     delegate (Object sender, PropertyChangedEventArgs e) {
                         // set joystick position by property
                         string property = e.PropertyName;
-                        if (e.Equals("VM_aileron")) {
-                            Canvas.SetLeft(Knob, PropertToJoystickPosition(viewModel.VM_aileron));
-                        } else if (e.Equals("VM_elevator")) {
-                            Canvas.SetBottom(Knob, PropertToJoystickPosition(viewModel.VM_elevator));
+                        if (property.Equals("VM_aileron")) {
+                            this.Dispatcher.Invoke(() =>
+                            {
+                                Canvas.SetLeft(Knob, PropertToJoystickPosition(viewModel.VM_aileron));
+                            });
+                        } else if (property.Equals("VM_elevator")) {
+                            this.Dispatcher.Invoke(() =>
+                            {
+                                Canvas.SetBottom(Knob, PropertToJoystickPosition(viewModel.VM_elevator));
+                            });
                         }
                     };
             }

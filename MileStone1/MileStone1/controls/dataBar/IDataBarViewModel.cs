@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MileStone1.controls.dataBar
+namespace MileStone1
 {
     public interface IDataBarViewModel
     {

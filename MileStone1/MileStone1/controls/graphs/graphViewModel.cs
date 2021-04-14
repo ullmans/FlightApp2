@@ -5,12 +5,13 @@ using System.ComponentModel;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-using ex1Exam2;
+
 
 /**
  * the view model of the graph
  * connect between view and model
  */
+/*
 public class graphViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
@@ -69,3 +70,5 @@ public class graphViewModel : INotifyPropertyChanged
     }
     
 }
+*/
+

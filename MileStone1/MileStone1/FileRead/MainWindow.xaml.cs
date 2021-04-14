@@ -34,7 +34,7 @@ namespace MileStone1 {
 
         public MainWindow() {
             InitializeComponent();
-            //viewModel = new FileReadViewModel(new FileReadModel());
+            viewModel = new FileReadViewModel(new FileReadModel());
             dataReadFinished = false;
             definitionsReadFinished = false;
             viewModel.FileReadFinished += useResults;
@@ -47,6 +47,7 @@ namespace MileStone1 {
             t_dataFilePath.Text = fileDialog.FileName;
             t_dataLoadState.Text = STATE_LOADING;
             viewModel.DataFilePath = fileDialog.FileName;
+            viewModel.ReadFile(FileType.Data);
         }
         private void b_browseDefinitions_Click(Object sender, RoutedEventArgs e) {
             OpenFileDialog fileDialog = new OpenFileDialog();
@@ -55,14 +56,17 @@ namespace MileStone1 {
             t_definitionsFilePath.Text = fileDialog.FileName;
             t_definitionsLoadState.Text = STATE_LOADING;
             viewModel.DefinitionsFilePath = fileDialog.FileName;
+            viewModel.ReadFile(FileType.Definitions);
         }
 
         private void useResults(Object sender, FileType fileType) {
             if (sender as IFileReadViewModel == viewModel) {
                 if (fileType == FileType.Data) {
+                    t_dataLoadState.Text = STATE_READY;
                     dataReadFinished = true;
                 }
                 if (fileType == FileType.Definitions) {
+                    t_definitionsLoadState.Text = STATE_READY;
                     definitionsReadFinished = true;
                 }
                 if (dataReadFinished && definitionsReadFinished) {
@@ -72,8 +76,8 @@ namespace MileStone1 {
         }
 
         private void b_start_Click(Object sender, RoutedEventArgs e) {
-            //DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
-            //dataView.Show();
+            DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
+            dataView.Show();
         }
     }
 }
