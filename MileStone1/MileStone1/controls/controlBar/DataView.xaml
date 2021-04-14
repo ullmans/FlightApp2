@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MileStone1.controls"
-        xmlns:local="clr-namespace:MileStone1"
+        xmlns:local="clr-namespace:MileStone1.controls"
         mc:Ignorable="d"
-        Title="DataView" Height="450" Width="800">
+        Title="DataView" Height="500" Width="1000">
     <Grid>
-        <Controls:ControlBar x:Name="control_bar" Margin="0,250,0,0" Loaded="control_bar_Loaded"/>
+        <Controls:ControlBar Height="150" VerticalAlignment="Bottom"/>
         <Button x:Name="button" Content="Button" Height="0" Margin="127,139,673,295" Width="0"/>
     </Grid>
 </Window>

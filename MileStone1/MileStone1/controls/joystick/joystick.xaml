@@ -37,9 +37,9 @@
                  Background="Transparent" FontSize="50" TextAlignment="Center" BorderBrush="Transparent"/>
 
 
-        <Image Source="../../resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
+        <Image Source="/MileStone1;component/resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,0,0,0"/>
-        <Image Source="../../resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
+        <Image Source="/MileStone1;component/resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="670,0,0,0" RenderTransformOrigin=".5,.5">
             <Image.RenderTransform>
                 <RotateTransform Angle="180" />
@@ -48,14 +48,14 @@
         <TextBox Height="70" Margin="400,0,0,0" Text="Aileron" Width="340" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Left"
                  Background="Transparent" FontSize="50" TextAlignment="Center" BorderBrush="Transparent"/>
 
-        
-        <Image Source="../../resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
+
+        <Image Source="/MileStone1;component/resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="805,130,0,0" RenderTransformOrigin=".5,.5">
             <Image.RenderTransform>
                 <RotateTransform Angle="90" />
             </Image.RenderTransform>
         </Image>
-        <Image Source="../../resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
+        <Image Source="/MileStone1;component/resources/joystick/arrow.png" Width="70" Height="70" Stretch="Fill" 
                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="805,280,0,0" RenderTransformOrigin=".5,.5">
             <Image.RenderTransform>
                 <RotateTransform Angle="270" />
@@ -175,7 +175,7 @@
                 </Canvas.RenderTransform>
                 <Canvas.Resources>
 
-                    <Storyboard x:Key="CenterKnob" Name="centerKnob" Completed="centerKnob_Completed">
+                    <Storyboard x:Key="CenterKnob" Name="centerKnob">
 
                         <DoubleAnimation Storyboard.TargetName="knobPosition"
                              Storyboard.TargetProperty="X" To="0" Duration="0:0:0.2">
