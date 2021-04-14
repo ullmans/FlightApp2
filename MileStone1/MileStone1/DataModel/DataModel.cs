@@ -8,7 +8,7 @@ namespace MileStone1.dataModel {
     public class DataModel : IDataModel {
         private const int MILLISECONDS_IN_A_SECOND = 1000;
         // data lines per second (constant default value)
-        private int sampleRate;
+        private double sampleRate;
         // milliseconds per data line (affected by simulation speed)
         private int lineDelayInMillis;
 
@@ -16,16 +16,28 @@ namespace MileStone1.dataModel {
         private List<double[]> data;
         private List<string> definitions;
 
-        private bool _pause, stop;
+        private bool paused, stop;
 
-        public bool pause
+        public DataModel(ITelnetClient telnetClient, List<double[]> data, List<string> definitions, double sampleRate) {
+            this.telnetClient = telnetClient;
+            this.data = data;
+            this.definitions = definitions;
+            this.sampleRate = sampleRate;
+            lineDelayInMillis = (int)(MILLISECONDS_IN_A_SECOND / sampleRate);
+            Time = 0;
+            Speed = 1;
+            stop = false;
+            paused = false;
+        }
+
+        public bool Paused
         {
-            get { return _pause; }
+            get { return paused; }
             set
             {
-                if (_pause != value)
+                if (paused != value)
                 {
-                    _pause = value;
+                    paused = value;
                 }
             }
         }
@@ -43,18 +55,6 @@ namespace MileStone1.dataModel {
         public event IDataModel.UseAttributeUpdate UpdateAttribute;
 
         private int rowIndex;
-        public int position
-        {
-            get { return position; }
-            set
-            {
-                if (rowIndex != value)
-                {
-                    rowIndex = value;
-                    NotifyPropertyChanged("Position");
-                }
-            }
-        }
 
         private double time;
         public double Time {
@@ -63,6 +63,7 @@ namespace MileStone1.dataModel {
             }
             set {
                 time = value;
+                rowIndex = (int)(value * sampleRate);
                 NotifyPropertyChanged("Time");
             }
         }
@@ -79,17 +80,7 @@ namespace MileStone1.dataModel {
             }
         }
 
-        public DataModel(ITelnetClient telnetClient, List<double[]> data, List<string> definitions, int sampleRate) {
-            this.telnetClient = telnetClient;
-            this.data = data;
-            this.definitions = definitions;
-            this.sampleRate = sampleRate;
-            lineDelayInMillis = MILLISECONDS_IN_A_SECOND / sampleRate;
-            Time = 0;
-            Speed = 1;
-            stop = false;
-            pause = false;
-        }
+        
 
         public void Connect(string ip, int port) {
             telnetClient.Connect(ip, port);
@@ -102,11 +93,13 @@ namespace MileStone1.dataModel {
         public void Start() {
             new Thread(delegate () {
                 int numberOfSamples = data.Count;
-                int numberOfAttributes = _lines = data[0].Length;
-                while (!stop && !pause && rowIndex < numberOfSamples) {
-                    for (int colIndex = 0; colIndex < numberOfAttributes; ++colIndex)
-                    {
-                        UpdateAttribute(this, definitions[colIndex], data[rowIndex][colIndex]);
+                int numberOfAttributes = data[0].Length;
+                while (!stop && !paused && rowIndex < numberOfSamples) {
+                    // send updates about line value one by one
+                    for (int colIndex = 0; colIndex < numberOfAttributes; ++colIndex) {
+                        if (UpdateAttribute != null) {
+                            UpdateAttribute(this, definitions[colIndex], data[rowIndex][colIndex]);
+                        }
                         // send data to FlightGear
                     }
                     ++rowIndex;
@@ -116,19 +109,6 @@ namespace MileStone1.dataModel {
             }).Start();
         }
 
-        private int _lines;
-        public int lines
-        {
-            get { return _lines; }
-            set
-            {
-                if (_lines != value)
-                {
-                    _lines = value;
-                    NotifyPropertyChanged("lines");
-                }
-            }
-        }
 
         public void Stop()
         {
@@ -137,13 +117,18 @@ namespace MileStone1.dataModel {
 
         public void Pause()
         {
-            pause = true;
+            paused = true;
         }
 
         public void Resume()
         {
-            pause = false;
+            paused = false;
             Start();
         }
+
+        public double GetSimulationTime() {
+            return (data.Count * sampleRate);
+        }
+
     }
 }

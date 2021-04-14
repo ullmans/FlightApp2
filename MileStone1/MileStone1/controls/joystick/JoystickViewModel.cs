@@ -6,12 +6,14 @@ using System.ComponentModel;
 
 namespace MileStone1 {
     class JoystickViewModel : IJoystickViewModel {
+        // joystick properties
         private readonly string AILERON = "aileron";
         private readonly string ELEVATOR = "elevator";
         private readonly string THROTTLE = "throttle";
         private readonly string RUDDER = "rudder";
 
         private IDataModel model;
+        // matches property name to its value
         private Dictionary<string, double> properties;
 
         public double VM_aileron {
@@ -53,8 +55,8 @@ namespace MileStone1 {
             }
         }
 
-        private void UseAttributeUpdate(object sender, string property, double newValue) {
-            if (properties.ContainsKey(property) && sender as IDataModel == model) {
+        private void UseAttributeUpdate(Object sender, string property, double newValue) {
+            if (properties.ContainsKey(property)) {
                 properties[property] = newValue;
                 NotifyPropertyChanged("VM_" + property);
             }

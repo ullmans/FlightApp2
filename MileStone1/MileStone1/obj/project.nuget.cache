@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/lce1FDA61gsZSRO0PvByWjoze7FRRtgqlspYmvKdGVY0kyuXlONG4jAK5Ibyqn28EzYlr8wHISqPKdnlRU6Jg==",
+  "dgSpecHash": "imT6A7j0b0Cz+dg1onCJu7/Kykduc7YDJzpku9M3NjDxxSacyudZBSqvAn0/YkaENQrSopgDjHL8r8Gj4mZC2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ullmans\\OneDrive\\Toar\\AdvancedProgramming2\\ex1last\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+  "projectFilePath": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ullmans\\OneDrive\\Toar\\AdvancedProgramming2\\ex1last\\FlightApp2\\MileStone1\\MileStone1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

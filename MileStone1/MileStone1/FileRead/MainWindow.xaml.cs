@@ -40,7 +40,7 @@ namespace MileStone1 {
             viewModel.FileReadFinished += useResults;
         }
 
-        private void b_browseData_Click(object sender, RoutedEventArgs e) {
+        private void b_browseData_Click(Object sender, RoutedEventArgs e) {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.DefaultExt = CSV_EXTENTION;
             fileDialog.ShowDialog();
@@ -48,7 +48,7 @@ namespace MileStone1 {
             t_dataLoadState.Text = STATE_LOADING;
             viewModel.DataFilePath = fileDialog.FileName;
         }
-        private void b_browseDefinitions_Click(object sender, RoutedEventArgs e) {
+        private void b_browseDefinitions_Click(Object sender, RoutedEventArgs e) {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.DefaultExt = XML_EXTENTION;
             fileDialog.ShowDialog();
@@ -57,7 +57,7 @@ namespace MileStone1 {
             viewModel.DefinitionsFilePath = fileDialog.FileName;
         }
 
-        private void useResults(object sender, FileType fileType) {
+        private void useResults(Object sender, FileType fileType) {
             if (sender as IFileReadViewModel == viewModel) {
                 if (fileType == FileType.Data) {
                     dataReadFinished = true;
@@ -71,7 +71,7 @@ namespace MileStone1 {
             }
         }
 
-        private void b_start_Click(object sender, RoutedEventArgs e) {
+        private void b_start_Click(Object sender, RoutedEventArgs e) {
             //DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
             //dataView.Show();
         }

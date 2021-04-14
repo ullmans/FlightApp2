@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System;
 
 namespace MileStone1 {
     public interface IDataModel : INotifyPropertyChanged{
@@ -15,11 +16,11 @@ namespace MileStone1 {
         //timing
         double Time { get; set; }
         double Speed { get; set; }
-        bool pause { get; set; }
-        int lines { get; set; }
-        int position { get; set; }
+        bool Paused { get; set; }
+        double GetSimulationTime();
 
-        public delegate void UseAttributeUpdate(object sender, string property, double newValue);
+        // update when a new value for a plane attribute is scanned
+        public delegate void UseAttributeUpdate(Object sender, string property, double newValue);
         public event UseAttributeUpdate UpdateAttribute;
     }
 }

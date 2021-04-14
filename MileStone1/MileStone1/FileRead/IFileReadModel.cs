@@ -12,7 +12,7 @@ namespace MileStone1 {
         public double GetSampleRate();  //waht is that func??
         public List<string> GetDefinitions();   //done
 
-        public delegate void UseResult(object sender, FileType fileType);
+        public delegate void UseResult(Object sender, FileType fileType);
         public event UseResult FileReadFinished;
     }
 }

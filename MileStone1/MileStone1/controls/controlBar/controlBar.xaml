@@ -7,22 +7,22 @@
       d:DesignHeight="150" d:DesignWidth="800">
 
     <Grid>
-        <Button Name="b_start" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Click="b_start_Click">
+        <Button Name="b_start" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Click="B_start_Click">
             <Image Source="pack://application:,,,/resources/icons/start_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
-        <Button Name="b_slowDown" HorizontalAlignment="Left" Margin="60,35,0,0" VerticalAlignment="Top" Click="b_slowDown_Click">
+        <Button Name="b_slowDown" HorizontalAlignment="Left" Margin="60,35,0,0" VerticalAlignment="Top" Click="B_slowDown_Click">
             <Image Source="/MileStone1;component/resources/icons/slow_down_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
-        <Button Name="b_pause" HorizontalAlignment="Left" Margin="110,35,0,0" VerticalAlignment="Top" Click="b_pause_Click">
+        <Button Name="b_pause" HorizontalAlignment="Left" Margin="110,35,0,0" VerticalAlignment="Top" Click="B_pause_Click">
             <Image Source="/MileStone1;component/resources/icons/pause_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
-        <Button Name="b_play" HorizontalAlignment="Left" Margin="160,35,0,0" VerticalAlignment="Top" Click="b_play_Click">
+        <Button Name="b_play" HorizontalAlignment="Left" Margin="160,35,0,0" VerticalAlignment="Top" Click="B_play_Click">
             <Image Source="/MileStone1;component/resources/icons/play_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
-        <Button Name="b_speedUp" HorizontalAlignment="Left" Margin="210,35,0,0" VerticalAlignment="Top" Click="b_speedUp_Click">
+        <Button Name="b_speedUp" HorizontalAlignment="Left" Margin="210,35,0,0" VerticalAlignment="Top" Click="B_speedUp_Click">
             <Image Source="/MileStone1;component/resources/icons/speed_up_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
-        <Button Name="b_end" HorizontalAlignment="Left" Margin="260,35,0,0" VerticalAlignment="Top" Click="b_end_Click">
+        <Button Name="b_end" HorizontalAlignment="Left" Margin="260,35,0,0" VerticalAlignment="Top" Click="B_end_Click">
             <Image Source="/MileStone1;component/resources/icons/end_icon.png" Width="40" Height="40" Stretch="Fill"/>
         </Button>
         <Label Content="Play Speed:" FontSize="25" HorizontalAlignment="Left" Margin="315,45,0,0" VerticalAlignment="Top"/>

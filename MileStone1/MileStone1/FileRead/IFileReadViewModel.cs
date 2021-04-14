@@ -13,7 +13,7 @@ namespace MileStone1 {
         public double GetSampleRate();
         public List<string> GetDefinitions();
 
-        public delegate void UseResult(object sender, FileType fileType);
+        public delegate void UseResult(Object sender, FileType fileType);
         public event UseResult FileReadFinished;
     }
 }

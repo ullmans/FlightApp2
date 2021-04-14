@@ -55,7 +55,7 @@ namespace MileStone1 {
             return model.GetDefinitions();
         }
 
-        public void UseResult(object sender, FileType fileType) {
+        public void UseResult(Object sender, FileType fileType) {
             if (sender as IFileReadModel == model && FileReadFinished != null) {
                 FileReadFinished(this, fileType);
             }

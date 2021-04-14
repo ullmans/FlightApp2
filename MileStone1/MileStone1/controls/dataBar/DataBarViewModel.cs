@@ -27,7 +27,7 @@ namespace MileStone1.controls.dataBar
             }
         }*/
 
-        private void UseAttributeUpdate(object sender, string property, double newValue)
+        private void UseAttributeUpdate(Object sender, string property, double newValue)
         {
             if (sender as IDataModel == model)
             {
