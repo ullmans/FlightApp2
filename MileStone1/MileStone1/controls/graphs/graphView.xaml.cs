@@ -20,7 +20,7 @@ namespace ex1Exam2
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// the view of the graph - put the graphs in window
-    public partial class graphView : Window
+    public partial class graphView : UserControl
     {
         private string[] buttonsNames = new string[] {"aileron", "elevator", "rudder", "flaps", "slats",
             "speedbrake", "throttle", "throttle", "engine-pump", "engine-pump", "electric-pump",
@@ -111,8 +111,11 @@ namespace ex1Exam2
         public graphView()
         {
             InitializeComponent();
+        }
 
-            //this.dviewmodel = new graphViewModel(this);
+        public void SetVM()
+        {
+            this.dviewmodel = new graphViewModel(this);
 
             double step = this.buttonsl.Height / 22;
             StackPanel sp = this.buttonsl;
@@ -139,7 +142,6 @@ namespace ex1Exam2
             this.create_exis(canGraph);
             this.create_exis(pearsonGraph);
             this.create_exis(lenearGraph);
-
         }
 
         //when button is clicked we need to change graph
