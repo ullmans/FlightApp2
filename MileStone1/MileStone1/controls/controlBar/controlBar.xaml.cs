@@ -27,7 +27,7 @@ namespace MileStone1.controls
         }
 
         // sets the control bar's view model
-        public void setVM(ControlBarViewModel newVM)
+        public void SetVM(ControlBarViewModel newVM)
         {
             vm = newVM;
             // adds delegate function to view model that updates the slider's value
@@ -41,14 +41,14 @@ namespace MileStone1.controls
         }
 
         // returns to start of flight
-        private void b_start_Click(object sender, RoutedEventArgs e)
+        private void B_start_Click(object sender, RoutedEventArgs e)
         {
             vm.GoToStart();
             t_progress.Text = "0%";
             progressBar.Value = 0;
         }
         // decreases the play speed
-        private void b_slowDown_Click(object sender, RoutedEventArgs e)
+        private void B_slowDown_Click(object sender, RoutedEventArgs e)
         {
             vm.DecreaseSpeed();
             if (vm.VM_playSpeed < 0.1)
@@ -57,22 +57,22 @@ namespace MileStone1.controls
             }
         }
         // pauses the flight display
-        private void b_pause_Click(object sender, RoutedEventArgs e)
+        private void B_pause_Click(object sender, RoutedEventArgs e)
         {
             vm.Pause();
         }
         // unpauses the flight display
-        private void b_play_Click(object sender, RoutedEventArgs e)
+        private void B_play_Click(object sender, RoutedEventArgs e)
         {
             vm.Play();
         }
         // increases the flight display's speed
-        private void b_speedUp_Click(object sender, RoutedEventArgs e)
+        private void B_speedUp_Click(object sender, RoutedEventArgs e)
         {
             vm.IncreaseSpeed();
         }
         // jumps to end of flight
-        private void b_end_Click(object sender, RoutedEventArgs e)
+        private void B_end_Click(object sender, RoutedEventArgs e)
         {
             vm.GoToEnd();
             t_progress.Text = "100%";

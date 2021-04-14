@@ -34,22 +34,22 @@ public class ControlBarViewModel : INotifyPropertyChanged
 	// whether or not the flight display is running
 	public bool VM_running
     {
-		get { return this.model.running; }
+		get { return this.model.Running; }
     }
 	// the amount of lines in a flight file
 	public int VM_lines
     {
-		get { return this.model.lines; }
+		get { return this.model.Lines; }
     }
 	// line in flight file the flight display is showing
 	public int VM_position
     {
-		get { return this.model.position; }
+		get { return this.model.Position; }
     }
 	// the speed at which the flight display is runniong
 	public double VM_playSpeed
     {
-		get { return this.model.playSpeed; }
+		get { return this.model.PlaySpeed; }
     }
 
 	// returns to the start of the flight
@@ -57,7 +57,7 @@ public class ControlBarViewModel : INotifyPropertyChanged
     {
 		if (VM_position != 0)
         {
-			this.model.position = 0;
+			this.model.Position = 0;
         }
     }
 
@@ -66,7 +66,7 @@ public class ControlBarViewModel : INotifyPropertyChanged
 	{
 		if (VM_position != VM_lines)
 		{
-			this.model.position = VM_lines;
+			this.model.Position = VM_lines;
 		}
 	}
 
@@ -75,41 +75,41 @@ public class ControlBarViewModel : INotifyPropertyChanged
 	{
 		if (VM_playSpeed > 0)
 		{
-			this.model.playSpeed -= 0.1;
+			this.model.PlaySpeed -= 0.1;
 		}
 		if (VM_playSpeed < 0.01)
         {
-			this.model.playSpeed = 0;
+			this.model.PlaySpeed = 0;
         }
 	}
 	
 	// increases the flight display's speed
 	public void IncreaseSpeed()
     {
-		this.model.playSpeed += 0.1;
+		this.model.PlaySpeed += 0.1;
     }
 
 	// pauses the flight display
 	public void Pause()
     {
-		this.model.running = false;
+		this.model.Running = false;
     }
 
 	// unpauses the flight display
 	public void Play()
 	{
-		this.model.running = true;
+		this.model.Running = true;
 	}
 
 	// jumps to a specific line in the flight file
 	public void SkipTo(int newPosition)
     {
-		this.model.position = newPosition;
+		this.model.Position = newPosition;
     }
 
 	// updates the control bar when moving to next line in flight file
 	public void Move()
     {
-		this.model.position++;
+		this.model.Position++;
     }
 }

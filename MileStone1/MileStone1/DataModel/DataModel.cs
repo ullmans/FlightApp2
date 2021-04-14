@@ -16,16 +16,16 @@ namespace MileStone1.dataModel {
         private List<double[]> data;
         private List<string> definitions;
 
-        private bool _pause, stop;
+        private bool paused, stop;
 
-        public bool pause
+        public bool Paused
         {
-            get { return _pause; }
+            get { return paused; }
             set
             {
-                if (_pause != value)
+                if (paused != value)
                 {
-                    _pause = value;
+                    paused = value;
                 }
             }
         }
@@ -43,9 +43,9 @@ namespace MileStone1.dataModel {
         public event IDataModel.UseAttributeUpdate UpdateAttribute;
 
         private int rowIndex;
-        public int position
+        public int Position
         {
-            get { return position; }
+            get { return rowIndex; }
             set
             {
                 if (rowIndex != value)
@@ -88,7 +88,7 @@ namespace MileStone1.dataModel {
             Time = 0;
             Speed = 1;
             stop = false;
-            pause = false;
+            paused = false;
         }
 
         public void Connect(string ip, int port) {
@@ -102,8 +102,8 @@ namespace MileStone1.dataModel {
         public void Start() {
             new Thread(delegate () {
                 int numberOfSamples = data.Count;
-                int numberOfAttributes = _lines = data[0].Length;
-                while (!stop && !pause && rowIndex < numberOfSamples) {
+                int numberOfAttributes = lines = data[0].Length;
+                while (!stop && !paused && rowIndex < numberOfSamples) {
                     for (int colIndex = 0; colIndex < numberOfAttributes; ++colIndex)
                     {
                         UpdateAttribute(this, definitions[colIndex], data[rowIndex][colIndex]);
@@ -116,15 +116,15 @@ namespace MileStone1.dataModel {
             }).Start();
         }
 
-        private int _lines;
-        public int lines
+        private int lines;
+        public int Lines
         {
-            get { return _lines; }
+            get { return lines; }
             set
             {
-                if (_lines != value)
+                if (lines != value)
                 {
-                    _lines = value;
+                    lines = value;
                     NotifyPropertyChanged("lines");
                 }
             }
@@ -137,12 +137,12 @@ namespace MileStone1.dataModel {
 
         public void Pause()
         {
-            pause = true;
+            paused = true;
         }
 
         public void Resume()
         {
-            pause = false;
+            paused = false;
             Start();
         }
     }

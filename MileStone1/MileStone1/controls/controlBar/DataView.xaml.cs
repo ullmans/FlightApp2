@@ -19,11 +19,11 @@ namespace MileStone1 {
             InitializeComponent();
         }
 
-        private void control_bar_Loaded(object sender, RoutedEventArgs e) {
-            //control_bar.setVM(new ControlBarViewModel(new ControlBarModel(1000))); // replace 1000 with lines
+        private void Control_bar_Loaded(object sender, RoutedEventArgs e) {
+            
         }
 
-        private void button_Click(object sender, RoutedEventArgs e) {
+        private void Button_Click(object sender, RoutedEventArgs e) {
 
         }
     }

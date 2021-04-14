@@ -5,13 +5,13 @@ using System.ComponentModel;
 public interface IControlBarModel : INotifyPropertyChanged
 {
     // says whether or not the plane display should be running
-    bool running { get; set; }
+    bool Running { get; set; }
     // number of lines in a flight file
-    int lines { get; set; }
+    int Lines { get; set; }
     // line in flight file the flight display is showing
-    int position { get; set; }
+    int Position { get; set; }
     // the speed at which the flight display is running
-    double playSpeed { get; set; }
+    double PlaySpeed { get; set; }
 
     // updates control bar after moving to next line in flight file
     void Move();

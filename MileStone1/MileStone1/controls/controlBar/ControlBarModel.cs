@@ -27,7 +27,7 @@ public class ControlBarModel : IControlBarModel
 
     // for each of the properties in the interface if the value is new then the
     // NotifyPropertyChanged function is called
-    public bool running
+    public bool Running
     {
         get { return mainModel.pause; }
         set
@@ -40,7 +40,7 @@ public class ControlBarModel : IControlBarModel
         }
     }
 
-    public int lines
+    public int Lines
     {
         get { return mainModel.lines; }
         set { if (mainModel.lines != value)
@@ -50,7 +50,7 @@ public class ControlBarModel : IControlBarModel
             } 
         }
     }
-    public int position
+    public int Position
     {
         get { return mainModel.position; }
         set
@@ -63,7 +63,7 @@ public class ControlBarModel : IControlBarModel
         }
     }
 
-    public double playSpeed
+    public double PlaySpeed
     {
         get { return mainModel.Speed; }
         set
@@ -78,6 +78,6 @@ public class ControlBarModel : IControlBarModel
  
     public void Move()
     {
-        this.position++;
+        this.Position++;
     }
 }
