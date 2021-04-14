@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.ComponentModel;
-
+using System.Windows;
 
 namespace MileStone1.controls {
     /// <summary>
@@ -28,16 +28,23 @@ namespace MileStone1.controls {
                         if (property.Equals("VM_aileron")) {
                             this.Dispatcher.Invoke(() =>
                             {
-                                Canvas.SetLeft(Knob, PropertToJoystickPosition(viewModel.VM_aileron));
-                                if (PropertToJoystickPosition(viewModel.VM_aileron) != 125) {
-                                    throw new Exception(PropertToJoystickPosition(viewModel.VM_aileron).ToString());
-                                }
+                                var margin = Knob.Margin;
+                                margin.Left = PropertToJoystickPosition(viewModel.VM_aileron);
+                                Knob.Margin = margin;
                                 
                             });
                         } else if (property.Equals("VM_elevator")) {
                             this.Dispatcher.Invoke(() =>
                             {
-                                Canvas.SetBottom(Knob, PropertToJoystickPosition(viewModel.VM_elevator));
+                                var margin = Knob.Margin;
+                                margin.Bottom = PropertToJoystickPosition(viewModel.VM_elevator);
+                                Knob.Margin = margin;
+                            });
+                        } else if (property.Equals("VM_throttle")) {
+                            this.Dispatcher.Invoke(() => {
+
+                             
+                                
                             });
                         }
                     };
@@ -47,7 +54,7 @@ namespace MileStone1.controls {
 
         // linear transformation from range [PROPERTY_MIN,PROPERTY_MAX] to [0,JOYSTICK_SIZE]
         private int PropertToJoystickPosition(double value) {
-            return (int)((10 * value - PROPERTY_MIN) * JOYSTICK_SIZE / (PROPERTY_MAX - PROPERTY_MIN));
+            return (int)((value - PROPERTY_MIN) * JOYSTICK_SIZE / (PROPERTY_MAX - PROPERTY_MIN));
         }
     }
 }
