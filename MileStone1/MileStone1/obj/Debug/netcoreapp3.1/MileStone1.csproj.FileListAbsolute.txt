@@ -54,3 +54,6 @@ C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.dll
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.pdb
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.genruntimeconfig.cache
+C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\graphs\graphView.baml
+C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\graphs\graphView.g.cs
+C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\graphs\graphsView.g.cs

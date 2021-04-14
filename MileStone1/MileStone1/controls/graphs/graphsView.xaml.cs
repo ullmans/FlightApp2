@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,14 +11,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-/*
-namespace ex1Exam2
+namespace MileStone1.controls.graphs
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for graphsView.xaml
     /// </summary>
-    /// the view of the graph - put the graphs in window
-    public partial class graphView : UserControl
+    public partial class graphsView : UserControl
     {
         private string[] buttonsNames = new string[] {"aileron", "elevator", "rudder", "flaps", "slats",
             "speedbrake", "throttle", "throttle", "engine-pump", "engine-pump", "electric-pump",
@@ -45,7 +41,7 @@ namespace ex1Exam2
 
         public Line Linearline
         {
-            get { return this.linearLine;  }
+            get { return this.linearLine; }
             set
             {
                 this.linearLine = value;
@@ -61,7 +57,7 @@ namespace ex1Exam2
                 PointCollection pc = new PointCollection();
                 pc.Add(new Point(value.X1, value.Y1));
                 pc.Add(new Point(value.X2, value.Y2));
-                
+
                 this.lenearGraph.Children.Add(linear_path);
             }
         }
@@ -108,7 +104,7 @@ namespace ex1Exam2
         }
 
         //create buttons and the exises
-        public graphView()
+        public graphsView()
         {
             InitializeComponent();
         }
@@ -188,7 +184,7 @@ namespace ex1Exam2
 
             Graph.Children.Add(yaxis_path);
         }
-        
+
         //print the points that given in the given graph
         private void printDots(Canvas Graph, PointCollection Points)
         {
@@ -219,8 +215,5 @@ namespace ex1Exam2
 
             Graph.Children.Add(polyline);
         }
-
     }
-    
-
-}*/
+}
