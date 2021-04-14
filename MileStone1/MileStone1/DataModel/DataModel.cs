@@ -103,6 +103,7 @@ namespace MileStone1 {
                         // send data to FlightGear
                     }
                     ++rowIndex;
+                    Console.WriteLine("hello world");
                     Thread.Sleep(lineDelayInMillis);
                     Time += (double)lineDelayInMillis / MILLISECONDS_IN_A_SECOND;
                 }
