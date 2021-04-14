@@ -21,9 +21,10 @@ namespace MileStone1.controls.dataBar {
             InitializeComponent();
         }
 
-        public void setViewModel(IDataModel model)
+        public void SetVM(IDataModel model)
         {
-            dbvm =  new IDataBarViewModel(model);
+            dbvm =  new DataBarViewModel(model);    //IDataViewModel
+            DataContext = dbvm;
         }
     }
 }

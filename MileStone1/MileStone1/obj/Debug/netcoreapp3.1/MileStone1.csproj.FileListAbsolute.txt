@@ -65,9 +65,7 @@ C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1_MarkupCompile.lref
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\dataBar\dataBar.g.cs
 =======
-<<<<<<< HEAD
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\dataBar\dataBar.g.cs
-=======
 C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.csprojAssemblyReference.cache
 C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\FileRead\MainWindow.baml
 C:\Users\4royt\Documents\AdvancedProg2\firstMilestone\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\controlBar\controlBar.g.cs

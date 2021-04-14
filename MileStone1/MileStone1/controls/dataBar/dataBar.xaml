@@ -22,20 +22,19 @@
             </Grid.RowDefinitions>
 
             <Label Content ="DashBoard:" FontWeight="Heavy" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,10,10,10" Background="White" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Grid.Row="1" Content ="Altimeter:" Margin="10,10,10,10" Background="White" BorderBrush="Black" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Grid.Row="2" Content="Air speed:" Margin="10,10,10,10" Background="White" BorderBrush="Black" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Grid.Row="3" Content="Angle from north:"  Margin="10,10,10,10" Background="White" BorderBrush="Black" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="Pitch:" Margin="10,10,10,10" Background="White" BorderBrush="Black" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Grid.Row="2" Grid.Column="2" Content="Roll:"  Margin="10,10,10,10" Background="White" BorderBrush="Black" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Grid.Row="3" Grid.Column="2" Content="Yaw:" Margin="10,10,10,10" Background="White" BorderBrush="Black" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label Grid.Row="1" Content ="Altimeter:" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="2" Content="Airspeed:" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="3" Content="Angle from north:"  Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="1" Grid.Column="2" Content="Pitch:" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="2" Grid.Column="2" Content="Roll:"  Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="3" Grid.Column="2" Content="Yaw:" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-
-            <Label Grid.Row="1" Grid.Column="1" Content="{Binding Altimeter}"  Margin="0,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="169"/>
-            <Label Grid.Row="2" Grid.Column="1" Content="{Binding AirSpeed}" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="3" Grid.Column="1" Content="{Binding AngleFromNorth}" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="1" Grid.Column="3" Content="{Binding Pitch}" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="2" Grid.Column="3" Content="{Binding Roll}" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <Label Grid.Row="3" Grid.Column="3" Content="{Binding Yaw}" Margin="10,10,10,10" Background="White" BorderBrush="Black" BorderThickness="3" FontSize="36" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Altimeter}"  Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding AirSpeed}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding AngleFromNorth}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
+            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Pitch}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
+            <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding Roll}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
+            <TextBlock Grid.Row="3" Grid.Column="3" Text="{Binding Yaw}" Margin="10,10,10,10" Background="White" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="169"/>
 
 
         </Grid>

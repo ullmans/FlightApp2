@@ -31,17 +31,17 @@ namespace MileStone1.controls.dataBar
         {
             if (sender as IDataModel == model)
             {
-                if (property.Equals("Altimeter"))
+                if (property.Equals("altimeter"))
                 {
                     altimeter = newValue;
                 }
-                else if (property.Equals("AirSpeed"))
+                else if (property.Equals("airSpeed"))
                 {
                     airSpeed = newValue;
                 }
-                else if (property.Equals("")) //angle from north
+                else if (property.Equals("rudder")) //כיוון
                 {
-
+                    rudder = newValue;
                 }
                 else if (property.Equals("Pitch"))
                 {
@@ -72,11 +72,11 @@ namespace MileStone1.controls.dataBar
             set { airSpeed = value; }
         }
 
-        private double anglefromNorth;
-        public double AngleFromNorth
+        private double rudder;
+        public double Rudder
         {
-            get { return anglefromNorth; }
-            set { anglefromNorth = value; }
+            get { return rudder; }
+            set { rudder = value; }
         }
 
         private double pitch;
