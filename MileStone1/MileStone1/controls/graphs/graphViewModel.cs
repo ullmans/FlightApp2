@@ -11,13 +11,13 @@ using System.Windows.Shapes;
  * the view model of the graph
  * connect between view and model
  */
-/*
+
 public class graphViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
     //the view and the model
     private graphModel dmodel;
-    private graphView dview;
+    private MileStone1.controls.graphs.graphsView dview;
     private int pearson;
 
     public int Pearson
@@ -26,13 +26,13 @@ public class graphViewModel : INotifyPropertyChanged
         set { this.pearson = value; }
     }
 
-    public graphViewModel(double[][] data)
+    public graphViewModel(List<double[]> data)
     {
         //double[][] x;
         //x = new double[1][] { new double[]{ 1.0, 3.0, 5.0, 7.0, 9.0 } };
         
         this.dmodel = new graphModel(this, data);
-        this.dview = new graphView();
+        this.dview = new MileStone1.controls.graphs.graphsView();
         this.dview.setVM(this);
     }
 
@@ -70,5 +70,5 @@ public class graphViewModel : INotifyPropertyChanged
     }
     
 }
-*/
+
 

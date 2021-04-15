@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 
 
 
@@ -13,7 +14,7 @@ using System.Windows.Shapes;
  * save a canvas and calculate dots
  * 
  */
-/*
+
 public class graphModel : INotifyPropertyChanged
 {
 
@@ -23,10 +24,10 @@ public class graphModel : INotifyPropertyChanged
 	private Canvas chooseCanvas;
 	private Canvas pearsonCanvas;
 	//the data that have read
-	private double[][] csv;
+	private List<double[]> csv;
 	private graphViewModel gvm;
 
-	public graphModel(graphViewModel gVM, double[][] Csv)
+	public graphModel(graphViewModel gVM, List<double[]> Csv)
 	{
 		this.linearCanvas = new Canvas()
 		{
@@ -48,7 +49,7 @@ public class graphModel : INotifyPropertyChanged
 
 	}
 
-	public double[][] CSV
+	public List<double[]> CSV
     {
 		get
         {
@@ -124,7 +125,7 @@ public class graphModel : INotifyPropertyChanged
         {
 			linearPoints[i] = point;
         }
-		Line l = anomaly_detection_util.linear_reg(linearPoints, pc.Count);
+		Line l = MileStone1.anomaly_detection_util.linear_reg(linearPoints, pc.Count);
 		l.Y1 = (ymax / 2) * (1 - l.Y1 / (MAX + 1));
 		l.Y2 = (ymax / 2) * (1 - l.Y2 / (MAX + 1));
 
@@ -161,7 +162,7 @@ public class graphModel : INotifyPropertyChanged
 		float[] ys = new float[this.csv[given].Length];
 		int j = 0;
 		float maxP = 0;
-		for (int p = 0; p < this.CSV.Length; p++) {
+		for (int p = 0; p < this.CSV.Count; p++) {
 			int yVal = 0;
 			for (double x = xmin; x <= xmax; x += step)
 			{
@@ -170,7 +171,7 @@ public class graphModel : INotifyPropertyChanged
 				yVal++;
 			}
 			float pe;
-			pe = anomaly_detection_util.pearson(xs, ys, this.csv[given].Length);
+			pe = MileStone1.anomaly_detection_util.pearson(xs, ys, this.csv[given].Length);
 			if (pe > maxP)
             {
 				maxP = pe;
@@ -193,4 +194,3 @@ public class graphModel : INotifyPropertyChanged
 		return pc;
 	}
 }
-*/

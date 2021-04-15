@@ -109,9 +109,9 @@ namespace MileStone1.controls.graphs
             InitializeComponent();
         }
 
-        public void SetVM()
+        public void SetVM(List<double[]> input)
         {
-            this.dviewmodel = new graphViewModel(this);
+            this.dviewmodel = new graphViewModel(input);
 
             double step = this.buttonsl.Height / 22;
             StackPanel sp = this.buttonsl;
