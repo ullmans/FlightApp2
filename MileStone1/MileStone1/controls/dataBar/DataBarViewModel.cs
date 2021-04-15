@@ -34,27 +34,27 @@ namespace MileStone1
             {
                 if (property.Equals("altimeter_indicated-altitude-ft"))
                 {
-                    altimeter = newValue;
+                    Altimeter = newValue;
                 }
                 else if (property.Equals("airspeed-kt"))
                 {
-                    airSpeed = newValue;
+                    AirSpeed = newValue;
                 }
                 else if (property.Equals("heading-deg"))
                 {
-                    heading = newValue;
+                    Heading = newValue;
                 }
                 else if (property.Equals("pitch-deg"))
                 {
-                    pitch = newValue;
+                    Pitch = newValue;
                 }
                 else if (property.Equals("roll-deg"))
                 {
-                    roll = newValue;
+                    Roll = newValue;
                 }
                 else if (property.Equals("side-slip-deg"))
                 {
-                    yaw = newValue;
+                    Yaw = newValue;
                 }
             }
         }

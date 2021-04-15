@@ -6,7 +6,8 @@
             xmlns:local="clr-namespace:MileStone1.controls"
             mc:Ignorable="d" 
             d:DesignHeight="650" d:DesignWidth="1000">
-    <Grid Background="White">
+    <Border Background="White" BorderBrush="Black" BorderThickness="7,7,7,7" CornerRadius="50,50,50,50">
+    <Grid>
         <Slider x:Name="s_throttle" Height="340" Margin="240,70,0,0" Width="20"  HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Orientation="Vertical" IsEnabled="True" Minimum="0" Maximum="1" Value="{Binding VM_throttle, Mode=OneWay}" TickFrequency="0.01">
             <Slider.RenderTransform>
@@ -192,6 +193,7 @@
                 </Canvas.Resources>
             </Canvas>
         </Canvas>
-        <Label x:Name="label" Content="Label" Margin="-309,484,1309,116"/>
-    </Grid>
+            <Label x:Name="label" Content="Label" Margin="-309,484,1309,116"/>
+        </Grid>
+    </Border>
 </UserControl>
