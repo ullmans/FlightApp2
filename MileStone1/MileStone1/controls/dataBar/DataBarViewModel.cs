@@ -13,11 +13,12 @@ namespace MileStone1
         public DataBarViewModel(IDataModel model)
         {
             this.model = model;
-            /*this.model.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e)
-            {
-                NotifyPropertyChanged("VM_" + e.PropertyName);
-            };*/
             this.model.UpdateAttribute += UseAttributeUpdate;
+            /*this.model.PropertyChanged +=
+                delegate (Object sender, PropertyChangedEventArgs e)
+                {
+                    NotifyPropertyChanged("VM_" + e.PropertyName);
+                };*/
         }
         public void NotifyPropertyChanged(string propName)
         {
