@@ -116,8 +116,8 @@ namespace MileStone1 {
                         sb.Append(',');
                     }
                     ++rowIndex;
-                    sb.Append("\n");
-                    telnetClient.Write(sb.ToString().Substring(0, sb.ToString().Length - 2));
+                    //sb.Append("\n");
+                    telnetClient.Write(sb.ToString().Substring(0, sb.ToString().Length - 1) + "\n");
                     Thread.Sleep(lineDelayInMillis);
                     time += 1 / sampleRate;
                     NotifyPropertyChanged("Time");
