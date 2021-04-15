@@ -21,6 +21,7 @@ namespace MileStone1 {
             control_bar.SetVM(new ControlBarViewModel(new ControlBarModel(model)));
             data_bar.SetVM(new DataBarViewModel(model));
             joystick.SetVM(new JoystickViewModel(model));
+            graph_bar.SetVM(dataLog);
         }
     }
 }

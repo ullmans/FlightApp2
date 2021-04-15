@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
+C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\
 MileStone1
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\App.xaml
-6-74779938
+C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\App.xaml
+6-396411074
 
-31-633858901
+31-1595492264
 192-1533232326
-controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\graphs\graphsView.xaml;controls\joystick\joystick.xaml;dataView\DataView.xaml;fileRead\MainWindow.xaml;
+controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\graphs\graphsView.xaml;controls\joystick\joystick.xaml;dataView\DataView.xaml;FileRead\MainWindow.xaml;
 
 False
 
