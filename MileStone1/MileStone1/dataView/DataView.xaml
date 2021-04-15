@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MileStone1.controls"
         mc:Ignorable="d"
-        Title="DataView" Height="1000" Width="1050" Background="Gray">
+        Title="DataView" Height="850" Width="1509" Background="Gray">
     <Grid>
-        <Controls:ControlBar x:Name="control_bar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
-        <Controls:DataBar x:Name="data_bar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,35,0,0"/>
-        <Controls:Joystick x:Name="joystick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="650" Width="1000">
+        <Controls:ControlBar x:Name="control_bar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="636,0,0,104"/>
+        <Controls:DataBar x:Name="data_bar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,448,0,0" Width="559"/>
+        <Controls:Joystick x:Name="joystick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="700" Width="1038">
             <Controls:Joystick.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
@@ -19,7 +19,7 @@
                 </TransformGroup>
             </Controls:Joystick.RenderTransform>
         </Controls:Joystick>
-        <Controls:graphsView x:Name="graph_bar" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,380,0,0" d:LayoutOverrides="Height"/>
+        <Controls:graphsView x:Name="graph_bar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="631,62,0,0"/>
     </Grid>
 
 </Window>

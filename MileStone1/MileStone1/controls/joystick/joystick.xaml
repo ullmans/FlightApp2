@@ -6,7 +6,7 @@
             xmlns:local="clr-namespace:MileStone1.controls"
             mc:Ignorable="d" 
             d:DesignHeight="650" d:DesignWidth="1000">
-    <Border Background="White" BorderBrush="Black" BorderThickness="13,13,13,13" CornerRadius="50,50,50,50">
+    <Border Background="White" BorderBrush="Black" BorderThickness="7,7,7,7" CornerRadius="50,50,50,50">
     <Grid>
         <Slider x:Name="s_throttle" Height="340" Margin="240,70,0,0" Width="20"  HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Orientation="Vertical" IsEnabled="True" Minimum="0" Maximum="1" Value="{Binding VM_throttle, Mode=OneWay}" TickFrequency="0.01">

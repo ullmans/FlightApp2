@@ -30,8 +30,7 @@ namespace MileStone1 {
             telnetClient.Connect(LOCALHOST, FLIGHTGEAR_PORT);
             this.data = data;
             this.definitions = definitions;
-            this.sampleRate = 100;
-            //this.sampleRate = sampleRate;
+            this.sampleRate = sampleRate;
             lineDelayInMillis = (int)(MILLISECONDS_IN_A_SECOND / sampleRate);
             Time = 0;
             Speed = 1;

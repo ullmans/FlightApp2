@@ -38,14 +38,6 @@ namespace MileStone1 {
             dataReadFinished = false;
             definitionsReadFinished = false;
             viewModel.FileReadFinished += useResults;
-            /////////////////////////////////////////
-            /*
-            viewModel.DataFilePath = "C:\\Users\\BenZvi\\Downloads\\reg_flight (1).csv";
-            viewModel.DefinitionsFilePath = "C:\\Users\\BenZvi\\Downloads\\playback_small.xml";
-            viewModel.ReadFile(FileType.Data);
-            viewModel.ReadFile(FileType.Definitions);
-            */
-            /////////////////////////////////////////
         }
 
         private void b_browseData_Click(Object sender, RoutedEventArgs e) {
