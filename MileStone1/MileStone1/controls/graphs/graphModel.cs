@@ -13,7 +13,7 @@ using System.Windows.Shapes;
  * save a canvas and calculate dots
  * 
  */
-/*
+
 public class graphModel : INotifyPropertyChanged
 {
 
@@ -124,7 +124,7 @@ public class graphModel : INotifyPropertyChanged
         {
 			linearPoints[i] = point;
         }
-		Line l = anomaly_detection_util.linear_reg(linearPoints, pc.Count);
+		Line l = MileStone1.anomaly_detection_util.linear_reg(linearPoints, pc.Count);
 		l.Y1 = (ymax / 2) * (1 - l.Y1 / (MAX + 1));
 		l.Y2 = (ymax / 2) * (1 - l.Y2 / (MAX + 1));
 
@@ -170,7 +170,7 @@ public class graphModel : INotifyPropertyChanged
 				yVal++;
 			}
 			float pe;
-			pe = anomaly_detection_util.pearson(xs, ys, this.csv[given].Length);
+			pe = MileStone1.anomaly_detection_util.pearson(xs, ys, this.csv[given].Length);
 			if (pe > maxP)
             {
 				maxP = pe;
@@ -193,4 +193,3 @@ public class graphModel : INotifyPropertyChanged
 		return pc;
 	}
 }
-*/
