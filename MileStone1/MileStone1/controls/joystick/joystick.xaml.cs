@@ -9,6 +9,7 @@ namespace MileStone1.controls {
     /// </summary>
     public partial class Joystick : UserControl {
         private readonly int JOYSTICK_SIZE = 250;
+        // minimum and maximum values for joystick properties
         private readonly int PROPERTY_MIN = -1;
         private readonly int PROPERTY_MAX = 1;
 
@@ -23,9 +24,6 @@ namespace MileStone1.controls {
                 viewModel = newViewModel;
                 viewModel.PropertyChanged +=
                     delegate (Object sender, PropertyChangedEventArgs e) {
-                        if (viewModel.VM_throttle == 0.2) {
-                            //throw new Exception("here");
-                        }
                         // set joystick position by property
                         string property = e.PropertyName;
                         if (property.Equals("VM_aileron")) {

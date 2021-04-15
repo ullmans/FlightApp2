@@ -6,6 +6,9 @@ using System.ComponentModel;
 
 namespace MileStone1 {
     public class DataModel : IDataModel {
+        private readonly string LOCALHOST = "localhost";
+        private readonly int FLIGHTGEAR_PORT = 8081;
+
         private readonly double MIN_SPEED = 0.1;
         private readonly double MAX_SPEED = 2;
         private readonly double EPSILON = 0.0001;
@@ -24,6 +27,7 @@ namespace MileStone1 {
 
         public DataModel(ITelnetClient telnetClient, List<double[]> data, List<string> definitions, double sampleRate) {
             this.telnetClient = telnetClient;
+            telnetClient.Connect(LOCALHOST, FLIGHTGEAR_PORT);
             this.data = data;
             this.definitions = definitions;
             //this.sampleRate = 100;
