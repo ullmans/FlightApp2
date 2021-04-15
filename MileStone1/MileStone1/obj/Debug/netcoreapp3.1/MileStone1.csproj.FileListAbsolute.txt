@@ -73,7 +73,6 @@ C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone
 C:\Users\ullmans\OneDrive\Toar\AdvancedProgramming2\ex1last\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.genruntimeconfig.cache
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\graphs\graphsView.g.cs
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\controls\graphs\graphsView.baml
-C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.csprojAssemblyReference.cache
 C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\bin\Debug\netcoreapp3.1\MileStone1.exe
 C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\bin\Debug\netcoreapp3.1\MileStone1.deps.json
 C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\bin\Debug\netcoreapp3.1\MileStone1.runtimeconfig.json
@@ -104,3 +103,4 @@ C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\obj\Debug\n
 C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.dll
 C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.pdb
 C:\Users\aesh2\source\repos\planep2\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.genruntimeconfig.cache
+C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\obj\Debug\netcoreapp3.1\MileStone1.csprojAssemblyReference.cache

@@ -108,7 +108,7 @@ namespace MileStone1 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MileStone1;V1.0.0.0;component/fileread/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MileStone1;component/fileread/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\fileRead\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -27,7 +27,7 @@ namespace MileStone1 {
 
         public DataModel(ITelnetClient telnetClient, List<double[]> data, List<string> definitions, double sampleRate) {
             this.telnetClient = telnetClient;
-            telnetClient.Connect(LOCALHOST, FLIGHTGEAR_PORT);
+            //telnetClient.Connect(LOCALHOST, FLIGHTGEAR_PORT);
             this.data = data;
             this.definitions = definitions;
             //this.sampleRate = 100;
