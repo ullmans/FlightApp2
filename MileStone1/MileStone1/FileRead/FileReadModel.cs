@@ -14,7 +14,7 @@ namespace MileStone1
         //ITelnetClient telnetClient;
         List<double[]> dataLogCSV;
         List<string> props; //properties
-        double sampleRate;  //number of kines in one second
+        double sampleRate;  //number of lines in one second
         //public event PropertyChangedEventHandler PropertyChanged;     ????
         public event IFileReadModel.UseResult FileReadFinished;
 
@@ -47,10 +47,11 @@ namespace MileStone1
                 
                 this.ReadyToUseResult(fileType);
             } 
-            else if (fileType == FileType.Definitions)  //xaml file
+            else if (fileType == FileType.Definitions)  //xml file
             {
                 using (TextReader connectionReader = new StreamReader(filePath))    //"./reg_flight.csv"
                 {
+                    int i = 0;
                     string line;
                     bool isSampleRateFound = false;
                     while ((line = connectionReader.ReadLine()) != null)
@@ -68,12 +69,13 @@ namespace MileStone1
                         if (!isSampleRateFound)
                         {
                             string[] findSampleRate = line.Split(':');
-                            if (findSampleRate[0].Equals("Recording"))
+                            if (findSampleRate[0].Replace(" ", String.Empty).Equals("Recording"))
                             {
                                 this.sampleRate = double.Parse(((findSampleRate[1]).Split(','))[2]);
                                 isSampleRateFound = true;
                             }
                         }
+                        i++;
                     }
                 }
                 this.ReadyToUseResult(fileType);
@@ -95,7 +97,8 @@ namespace MileStone1
         }
         public double GetSampleRate()   //what that func do?
         {
-            return 2.0; 
+            
+            return sampleRate; 
         }
 
 

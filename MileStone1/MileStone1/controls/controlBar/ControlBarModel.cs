@@ -7,12 +7,27 @@ namespace MileStone1 {
         // event for when a property changes
         public event PropertyChangedEventHandler PropertyChanged;
 
+        // event for when the simulation finished
+        public event IControlBarModel.EndRun SimulationFinished;
+
         // connection to main model
         private MileStone1.IDataModel mainModel;
 
         // constructor
         public ControlBarModel(MileStone1.IDataModel mainModel) {
             this.mainModel = mainModel;
+            this.mainModel.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e) {
+                if (e.PropertyName.Equals("Time")) {
+                    NotifyPropertyChanged("Position");
+                } else if (e.PropertyName.Equals("Speed")) {
+                    NotifyPropertyChanged("PlaySpeed");
+                }
+            };
+            this.mainModel.ScanFinished += delegate (Object sender) {
+                if (SimulationFinished != null) {
+                    SimulationFinished(this);
+                }
+            };
         }
 
         // calls the property changed event
@@ -22,27 +37,19 @@ namespace MileStone1 {
             }
         }
 
-        // for each of the properties in the interface if the value is new then the
-        // NotifyPropertyChanged function is called
-        public bool Running {
-            get { return !mainModel.Paused; }
-            set {
-                if (value != mainModel.Paused) {
-                    mainModel.Paused = !value;
-                    this.NotifyPropertyChanged("running");
-                }
+        public int Lines {
+            get {
+                return (int)mainModel.GetSimulationTime(); 
             }
         }
 
-        public int Lines {
-            get { return (int)mainModel.GetSimulationTime(); }
-        }
-        public int Position {
-            get { return (int)mainModel.Time; }
+        public double Position {
+            get {
+                return mainModel.Time; 
+            }
             set {
                 if (mainModel.Time != value) {
                     mainModel.Time = value;
-                    this.NotifyPropertyChanged("position");
                 }
             }
         }
@@ -52,18 +59,15 @@ namespace MileStone1 {
             set {
                 if (mainModel.Speed != value) {
                     mainModel.Speed = value;
-                    this.NotifyPropertyChanged("playSpeed");
+                    this.NotifyPropertyChanged("PlaySpeed");
                 }
             }
-        }
-
-        public void Move() {
-            this.Position++;
         }
 
         public void Play() {
             mainModel.Start();
         }
+
         public void Pause() {
             mainModel.Pause();
         }

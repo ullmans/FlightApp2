@@ -6,7 +6,11 @@ using System.ComponentModel;
 
 namespace MileStone1 {
     public class DataModel : IDataModel {
-        private const int MILLISECONDS_IN_A_SECOND = 1000;
+        private readonly double MIN_SPEED = 0.1;
+        private readonly double MAX_SPEED = 2;
+        private readonly double EPSILON = 0.0001;
+
+        private readonly int MILLISECONDS_IN_A_SECOND = 1000;
         // data lines per second (constant default value)
         private double sampleRate;
         // milliseconds per data line (affected by simulation speed)
@@ -44,6 +48,8 @@ namespace MileStone1 {
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public event IDataModel.UseAttributeUpdate UpdateAttribute;
+        public event IDataModel.EndRun ScanFinished;
 
         public void NotifyPropertyChanged(string propName)
         {
@@ -52,8 +58,6 @@ namespace MileStone1 {
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
-
-        public event IDataModel.UseAttributeUpdate UpdateAttribute;
 
         private int rowIndex;
 
@@ -65,7 +69,6 @@ namespace MileStone1 {
             set {
                 time = value;
                 rowIndex = (int)(value * sampleRate);
-                NotifyPropertyChanged("Time");
             }
         }
 
@@ -75,7 +78,9 @@ namespace MileStone1 {
                 return speed;
             }
             set {
-                speed = value;
+                if (MIN_SPEED - EPSILON  <= value && value <= MAX_SPEED + EPSILON) {
+                    speed = value;
+                }
                 lineDelayInMillis = (int)(MILLISECONDS_IN_A_SECOND / sampleRate / speed);
                 NotifyPropertyChanged("Speed");
             }
@@ -92,6 +97,7 @@ namespace MileStone1 {
         }
 
         public void Start() {
+            paused = false;
             new Thread(delegate () {
                 int numberOfSamples = data.Count;
                 int numberOfAttributes = data[0].Length;
@@ -109,7 +115,11 @@ namespace MileStone1 {
                     sb.Append("\n");
                     //telnetClient.Write(sb.ToString());
                     Thread.Sleep(lineDelayInMillis);
-                    Time += (double)lineDelayInMillis / MILLISECONDS_IN_A_SECOND;
+                    time += 1 / sampleRate;
+                    NotifyPropertyChanged("Time");
+                }
+                if (ScanFinished != null) {
+                    ScanFinished(this);
                 }
             }).Start();
         }
@@ -125,14 +135,8 @@ namespace MileStone1 {
             paused = true;
         }
 
-        public void Resume()
-        {
-            paused = false;
-            Start();
-        }
-
         public double GetSimulationTime() {
-            return (data.Count * sampleRate);
+            return (data.Count / sampleRate);
         }
 
     }

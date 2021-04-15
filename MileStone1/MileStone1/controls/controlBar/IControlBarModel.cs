@@ -5,20 +5,19 @@ using System.ComponentModel;
 
 namespace MileStone1 {
     public interface IControlBarModel : INotifyPropertyChanged {
-        // says whether or not the plane display should be running
-        bool Running { get; set; }
         // number of lines in a flight file
         int Lines { get; }
         // line in flight file the flight display is showing
-        int Position { get; set; }
+        double Position { get; set; }
         // the speed at which the flight display is running
         double PlaySpeed { get; set; }
 
-        // updates control bar after moving to next line in flight file
-        void Move();
-
         void Play();
         void Pause();
+
+        // event for when the simulation finished
+        public delegate void EndRun(Object sender);
+        public event EndRun SimulationFinished;
     }
 }
 

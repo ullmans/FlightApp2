@@ -39,12 +39,12 @@ namespace MileStone1 {
             definitionsReadFinished = false;
             viewModel.FileReadFinished += useResults;
             /////////////////////////////////////////
-            /*
+            
             viewModel.DataFilePath = "C:\\Users\\BenZvi\\Downloads\\reg_flight (1).csv";
             viewModel.DefinitionsFilePath = "C:\\Users\\BenZvi\\Downloads\\playback_small.xml";
             viewModel.ReadFile(FileType.Data);
             viewModel.ReadFile(FileType.Definitions);
-            */
+            
             /////////////////////////////////////////
         }
 

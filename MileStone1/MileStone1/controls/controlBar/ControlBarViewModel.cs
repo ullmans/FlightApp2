@@ -4,8 +4,14 @@ using System.ComponentModel;
 
 namespace MileStone1 {
 	public class ControlBarViewModel : IControlBarViewModel {
+		private readonly double SPEED_DELTA = 0.1;
+
 		// event for when a property is changed
 		public event PropertyChangedEventHandler PropertyChanged;
+
+		// event for when the simulation finished
+		public event IControlBarViewModel.EndRun SimulationFinished;
+
 		// the control bar's model
 		private ControlBarModel model;
 
@@ -16,6 +22,11 @@ namespace MileStone1 {
 			{
 				NotifyPropertyChanged("VM_" + e.PropertyName);
 			};
+			this.model.SimulationFinished += delegate (Object sender) {
+				if (SimulationFinished != null) {
+					SimulationFinished(this);
+				}
+			};
 		}
 
 		// calls the property chandged event
@@ -25,70 +36,44 @@ namespace MileStone1 {
 			}
 		}
 
-		// for each property their is only a getter that returns the control bar's
-		// model's property and no setter
-
-		// whether or not the flight display is running
-		public bool VM_running {
-			get { return this.model.Running; }
-		}
 		// the amount of lines in a flight file
-		public int VM_lines {
+		public int VM_Lines {
 			get { return this.model.Lines; }
 		}
+
 		// line in flight file the flight display is showing
-		public int VM_position {
-			get { return this.model.Position; }
+		public double VM_Position {
+			get { 
+				return this.model.Position; 
+			}
+			set {
+				this.model.Position = value;
+            }
 		}
+
 		// the speed at which the flight display is runniong
-		public double VM_playSpeed {
+		public double VM_PlaySpeed {
 			get { return this.model.PlaySpeed; }
-		}
-
-		// returns to the start of the flight
-		public void GoToStart() {
-			if (VM_position != 0) {
-				this.model.Position = 0;
-			}
-		}
-
-		// jumps to the end of the flight
-		public void GoToEnd() {
-			if (VM_position != VM_lines) {
-				this.model.Position = VM_lines;
-			}
 		}
 
 		// decreases the flight display's speed
 		public void DecreaseSpeed() {
-			if (VM_playSpeed > 0) {
-				this.model.PlaySpeed -= 0.1;
-			}
-			if (VM_playSpeed < 0.01) {
-				this.model.PlaySpeed = 0;
-			}
+			this.model.PlaySpeed -= SPEED_DELTA;
 		}
 
 		// increases the flight display's speed
 		public void IncreaseSpeed() {
-			this.model.PlaySpeed += 0.1;
+			this.model.PlaySpeed += SPEED_DELTA;
 		}
 
 		// pauses the flight display
 		public void Pause() {
-			this.model.Running = false;
 			this.model.Pause();
 		}
 
 		// unpauses the flight display
 		public void Play() {
-			this.model.Running = true;
 			this.model.Play();
-		}
-
-		// jumps to a specific line in the flight file
-		public void SkipTo(int newPosition) {
-			this.model.Position = newPosition;
 		}
 
 		// updates the control bar when moving to next line in flight file
