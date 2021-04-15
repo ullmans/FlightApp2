@@ -27,7 +27,7 @@ namespace MileStone1 {
 
         public DataModel(ITelnetClient telnetClient, List<double[]> data, List<string> definitions, double sampleRate) {
             this.telnetClient = telnetClient;
-            //telnetClient.Connect(LOCALHOST, FLIGHTGEAR_PORT);
+            telnetClient.Connect(LOCALHOST, FLIGHTGEAR_PORT);
             this.data = data;
             this.definitions = definitions;
             //this.sampleRate = 100;
@@ -117,7 +117,7 @@ namespace MileStone1 {
                     }
                     ++rowIndex;
                     sb.Append("\n");
-                    //telnetClient.Write(sb.ToString());
+                    telnetClient.Write(sb.ToString());
                     Thread.Sleep(lineDelayInMillis);
                     time += 1 / sampleRate;
                     NotifyPropertyChanged("Time");
