@@ -22,8 +22,8 @@ namespace MileStone1 {
             this.telnetClient = telnetClient;
             this.data = data;
             this.definitions = definitions;
-            //this.sampleRate = 100;
-            this.sampleRate = sampleRate;
+            this.sampleRate = 100;
+            //this.sampleRate = sampleRate;
             lineDelayInMillis = (int)(MILLISECONDS_IN_A_SECOND / sampleRate);
             Time = 0;
             Speed = 1;
@@ -107,7 +107,7 @@ namespace MileStone1 {
                     }
                     ++rowIndex;
                     sb.Append("\n");
-                    telnetClient.Write(sb.ToString());
+                    //telnetClient.Write(sb.ToString());
                     Thread.Sleep(lineDelayInMillis);
                     Time += (double)lineDelayInMillis / MILLISECONDS_IN_A_SECOND;
                 }

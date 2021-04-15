@@ -59,7 +59,11 @@ namespace MileStone1
 
                         if (splittedLine[0].Replace(" ", String.Empty).Equals("<name"))
                         {
-                            props.Add((splittedLine[1].Split('<'))[0]);
+                            StringBuilder propertyBuilder = new StringBuilder((splittedLine[1].Split('<'))[0]);
+                            if (props.Contains(propertyBuilder.ToString())) {
+                                propertyBuilder.Append("2");
+                            }
+                            props.Add(propertyBuilder.ToString());
                         }
                         if (!isSampleRateFound)
                         {

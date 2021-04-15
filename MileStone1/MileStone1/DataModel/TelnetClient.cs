@@ -8,7 +8,7 @@ namespace MileStone1 {
 
         public TelnetClient()
         {
-            this.client = new TcpClient("localhost", 8081);
+            //this.client = new TcpClient("localhost", 8081);
         }
         public void Connect(string ip, int port) {
             client = new TcpClient("localhost", 8081);

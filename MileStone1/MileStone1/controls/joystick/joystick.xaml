@@ -8,8 +8,7 @@
             d:DesignHeight="650" d:DesignWidth="1000">
     <Grid Background="White">
         <Slider x:Name="s_throttle" Height="340" Margin="240,70,0,0" Width="20"  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Orientation="Vertical" IsEnabled="True" Minimum="0" Maximum="1" TickFrequency="0.01" 
-                Value="{Binding VM_throttle, Mode=OneWay}">
+                Orientation="Vertical" IsEnabled="True" Minimum="0" Maximum="1" Value="{Binding VM_throttle, Mode=OneWay}" TickFrequency="0.01">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="5" ScaleY="1"/>
@@ -23,8 +22,9 @@
                  Background="Transparent" FontSize="50" TextAlignment="Center" BorderBrush="Transparent"/>
         
         
+        
         <Slider x:Name="s_rudder" Height="20" Margin="400,470,0,0" Width="340"  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Orientation="Horizontal" IsEnabled="True" Minimum="-1" Maximum="1" Value="{Binding VM_rudder, Mode=OneWay}">
+                Orientation="Horizontal" IsEnabled="True" Minimum="-1" Maximum="1" Value="{Binding VM_rudder, Mode=OneWay}" TickFrequency="0.01">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" ScaleY="5"/>
