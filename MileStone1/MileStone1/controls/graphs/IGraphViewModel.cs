@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 
-
-public interface IgraphViewModel : INotifyPropertyChanged
+namespace MileStone1
 {
-    public void updateDots(int chosen);
+    public interface IgraphViewModel : INotifyPropertyChanged
+    {
+        public void updateDots(int chosen);
+    }
 }

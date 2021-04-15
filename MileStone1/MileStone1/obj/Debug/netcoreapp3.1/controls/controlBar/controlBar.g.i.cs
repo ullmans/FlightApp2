@@ -124,7 +124,7 @@ namespace MileStone1.controls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MileStone1;component/controls/controlbar/controlbar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MileStone1;V1.0.0.0;component/controls/controlbar/controlbar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\controls\controlBar\controlBar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

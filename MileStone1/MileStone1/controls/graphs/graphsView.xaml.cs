@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MileStone1.controls.graphs
+namespace MileStone1.controls
 {
     /// <summary>
     /// Interaction logic for graphsView.xaml
@@ -97,11 +97,12 @@ namespace MileStone1.controls.graphs
 
             }
         }
-
+        
         public void setVM(graphViewModel graphVM)
         {
             this.dviewmodel = graphVM;
         }
+        
 
         //create buttons and the exises
         public graphsView()
