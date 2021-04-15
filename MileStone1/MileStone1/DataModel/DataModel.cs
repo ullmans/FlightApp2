@@ -97,14 +97,17 @@ namespace MileStone1 {
                 int numberOfAttributes = data[0].Length;
                 while (!stop && !paused && rowIndex < numberOfSamples) {
                     // send updates about line value one by one
+                    StringBuilder sb = new StringBuilder();
                     for (int colIndex = 0; colIndex < numberOfAttributes; ++colIndex) {
                         if (UpdateAttribute != null) {
                             UpdateAttribute(this, definitions[colIndex], data[rowIndex][colIndex]);
                         }
-                        // send data to FlightGear
+                        sb.Append(data[rowIndex][colIndex]);
+                        sb.Append(',');
                     }
                     ++rowIndex;
-                    Console.WriteLine("hello world");
+                    sb.Append("\n");
+                    telnetClient.Write(sb.ToString());
                     Thread.Sleep(lineDelayInMillis);
                     Time += (double)lineDelayInMillis / MILLISECONDS_IN_A_SECOND;
                 }
