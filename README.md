@@ -67,5 +67,7 @@ This will be enough for first time using the eapplication. for more Features, lo
 
 Now, you can run the application in the cmd (you need to compile before trying to run it), or open your IDE (we recommend visual studio), build the app, and run it.
 
+Copy this link (https://youtu.be/yviwDCsSGtI) for a tutorial video on how to use the app
+
 ## UML diagram
 you can find here a UML diagram of our project: https://github.com/ullmans/FlightApp2/blob/main/UML%20Diagram.pdf
