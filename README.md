@@ -61,7 +61,7 @@ graphModel.cs is the model that calculate the graph need to be shown
 Anyone who want to use our application, must download FlightGear. You can download Flightgear here: https://www.flightgear.org/download/
 After download FlightGear, open it. You need to enter some definitions to it.
 Open the cmd, and write there:
---generic=socket,in,10,127.0.0.1,5400,tcp,playback_small
+--generic=socket,in,10,127.0.0.1,8081,tcp,playback_small
 --fdm=null
 This will be enough for first time using the eapplication. for more Features, look here: https://www.flightgear.org/
 
