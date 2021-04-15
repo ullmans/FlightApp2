@@ -26,6 +26,8 @@ namespace MileStone1 {
                 return properties[ELEVATOR];
             }
         }
+
+        private double throttle;
         public double VM_throttle {
             get {
                 return properties[THROTTLE];
@@ -56,7 +58,7 @@ namespace MileStone1 {
         }
 
         private void UseAttributeUpdate(Object sender, string property, double newValue) {
-            if (properties.ContainsKey(property) && properties[property] != newValue) {
+            if (properties.ContainsKey(property) && newValue != 0) {
                 properties[property] = newValue;
                 NotifyPropertyChanged("VM_" + property);
             }
