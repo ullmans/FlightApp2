@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\aesh2\\.nuget\\packages\\": {},
+    "C:\\Users\\BenZvi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aesh2\\source\\repos\\planep2\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+      "projectUniqueName": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
       "projectName": "MileStone1",
-      "projectPath": "C:\\Users\\aesh2\\source\\repos\\planep2\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
-      "packagesPath": "C:\\Users\\aesh2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aesh2\\source\\repos\\planep2\\FlightApp2\\MileStone1\\MileStone1\\obj\\",
+      "projectPath": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\MileStone1.csproj",
+      "packagesPath": "C:\\Users\\BenZvi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BenZvi\\Documents\\Tal\\Bar_Ilan\\First_Degree\\Year_B\\Advanced_Programming_2\\Exercises\\Ex1\\FlightApp2\\MileStone1\\MileStone1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\aesh2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BenZvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
