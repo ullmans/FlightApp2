@@ -56,7 +56,7 @@ namespace MileStone1 {
         }
 
         private void UseAttributeUpdate(Object sender, string property, double newValue) {
-            if (properties.ContainsKey(property) && properties[property] != newValue) {
+            if (properties.ContainsKey(property)/* && newValue != 0*/) {
                 properties[property] = newValue;
                 NotifyPropertyChanged("VM_" + property);
             }

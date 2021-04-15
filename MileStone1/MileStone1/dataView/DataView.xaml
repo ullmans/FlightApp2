@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MileStone1.controls"
         mc:Ignorable="d"
-        Title="DataView" Height="800" Width="1000">
+        Title="DataView" Height="800" Width="1186">
     <Grid>
-        <Controls:ControlBar x:Name="control_bar" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <Controls:ControlBar x:Name="control_bar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30"/>
         <Controls:DataBar x:Name="data_bar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,380,0,0">
             <Controls:DataBar.RenderTransform>
                 <TransformGroup>
@@ -28,5 +28,7 @@
                 </TransformGroup>
             </Controls:Joystick.RenderTransform>
         </Controls:Joystick>
+        <Controls:graphsView x:Name="graph_bar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="385,0,0,112"/>
+
     </Grid>
 </Window>

@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="resources\joystick\" />
+    <None Remove="resources\icons\end_icon.png" />
+    <None Remove="resources\icons\pause_icon.png" />
+    <None Remove="resources\icons\play_icon.png" />
+    <None Remove="resources\icons\slow_down_icon.png" />
+    <None Remove="resources\icons\speed_up_icon.png" />
+    <None Remove="resources\icons\start_icon.png" />
+    <None Remove="resources\joystick\arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\icons\end_icon.png" />
+    <Resource Include="resources\icons\pause_icon.png" />
+    <Resource Include="resources\icons\play_icon.png" />
+    <Resource Include="resources\icons\slow_down_icon.png" />
+    <Resource Include="resources\icons\speed_up_icon.png" />
+    <Resource Include="resources\icons\start_icon.png" />
+    <Resource Include="resources\joystick\arrow.png" />
   </ItemGroup>
 
 </Project>

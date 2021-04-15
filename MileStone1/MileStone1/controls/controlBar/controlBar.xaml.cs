@@ -17,73 +17,79 @@ namespace MileStone1.controls
 {
     public partial class ControlBar : UserControl
     {
+        private readonly int MAX_PERCENT = 100;
+        private readonly string PERCENT_SIGN = "%";
+
         // the control bar's view model
         private IControlBarViewModel vm;
 
         // constructor
-        public ControlBar()
-        {
+        public ControlBar() {
             InitializeComponent();
+            b_pause.IsEnabled = false;
         }
 
         // sets the control bar's view model
-        public void SetVM(IControlBarViewModel newVM)
-        {
-            vm = newVM;
-            // adds delegate function to view model that updates the slider's value
-            vm.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e)
-            {
-                if (e.PropertyName == "VM_position")
-                {
-                    progressBar.Value = vm.VM_position;
+        public void SetVM(IControlBarViewModel newVM) {
+            vm = newVM;            
+            DataContext = vm;
+            vm.SimulationFinished += delegate (Object sender) {
+                this.Dispatcher.Invoke(() => {
+                    b_play.IsEnabled = true;
+                    b_pause.IsEnabled = false;
+                });
+            };
+            vm.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e) {
+                if (e.PropertyName.Equals("VM_Position")) {
+                    this.Dispatcher.Invoke(() => {
+                        int percentComplete = (int)(vm.VM_Position / progressBar.Maximum * MAX_PERCENT);
+                        if (percentComplete > MAX_PERCENT) {
+                            percentComplete = MAX_PERCENT;
+                        }
+                        t_progress.Text = percentComplete.ToString() + PERCENT_SIGN;
+                    });
+                } else if (e.PropertyName.Equals("VM_PlaySpeed")) {
+                    this.Dispatcher.Invoke(() => {
+                        t_playSpeed.Text = vm.VM_PlaySpeed.ToString();
+                    });
                 }
             };
         }
 
         // returns to start of flight
-        private void B_start_Click(Object sender, RoutedEventArgs e)
-        {
-            vm.GoToStart();
-            t_progress.Text = "0%";
+        private void B_start_Click(Object sender, RoutedEventArgs e) {
+            //t_progress.Text = "0%";
             progressBar.Value = 0;
         }
+
         // decreases the play speed
-        private void B_slowDown_Click(Object sender, RoutedEventArgs e)
-        {
+        private void B_slowDown_Click(Object sender, RoutedEventArgs e) {
             vm.DecreaseSpeed();
-            if (vm.VM_playSpeed < 0.1)
-            {
-                t_playSpeed.Text = "0";
-            }
         }
+
         // pauses the flight display
-        private void B_pause_Click(Object sender, RoutedEventArgs e)
-        {
+        private void B_pause_Click(Object sender, RoutedEventArgs e) {
             vm.Pause();
+            b_pause.IsEnabled = false;
+            b_play.IsEnabled = true;
         }
+
         // unpauses the flight display
-        private void B_play_Click(Object sender, RoutedEventArgs e)
-        {
+        private void B_play_Click(Object sender, RoutedEventArgs e) {
             vm.Play();
+            b_play.IsEnabled = false;
+            b_pause.IsEnabled = true;
         }
+
         // increases the flight display's speed
-        private void B_speedUp_Click(Object sender, RoutedEventArgs e)
-        {
+        private void B_speedUp_Click(Object sender, RoutedEventArgs e) {
             vm.IncreaseSpeed();
         }
+
         // jumps to end of flight
-        private void B_end_Click(Object sender, RoutedEventArgs e)
-        {
-            vm.GoToEnd();
-            t_progress.Text = "100%";
-            progressBar.Value = vm.VM_lines;
-        }
-        // updates the progress label's content and position property when
-        // slider is moved by user
-        private void SliderValueChanged(Object sender, RoutedEventArgs e)
-        {
-            vm.SkipTo(Convert.ToInt32(progressBar.Value));
-            t_progress.Text = (Convert.ToInt32(vm.VM_position * 100 / vm.VM_lines)).ToString() + "%";
+        private void B_end_Click(Object sender, RoutedEventArgs e) {
+            //t_progress.Text = "100%";
+            progressBar.Value = vm.VM_Lines;
         }
     }
 }
