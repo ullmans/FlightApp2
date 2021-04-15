@@ -85,7 +85,7 @@ namespace MileStone1 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MileStone1;component/dataview/dataview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MileStone1;V1.0.0.0;component/dataview/dataview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\dataView\DataView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

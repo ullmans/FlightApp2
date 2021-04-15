@@ -86,6 +86,7 @@ namespace MileStone1 {
         private void b_start_Click(Object sender, RoutedEventArgs e) {
             DataView dataView = new DataView(viewModel.GetDataLog(), viewModel.GetDefinitions(), viewModel.GetSampleRate());
             dataView.Show();
+            this.Close();
         }
     }
 }
