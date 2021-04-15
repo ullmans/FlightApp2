@@ -13,7 +13,7 @@ using System.Windows.Shapes;
  * save a canvas and calculate dots
  * 
  */
-
+/*
 public class graphModel : INotifyPropertyChanged
 {
 
@@ -193,3 +193,4 @@ public class graphModel : INotifyPropertyChanged
 		return pc;
 	}
 }
+*/

@@ -31,13 +31,12 @@ namespace MileStone1.controls {
                                 var margin = Knob.Margin;
                                 margin.Left = PropertToJoystickPosition(viewModel.VM_aileron);
                                 Knob.Margin = margin;
-                                
                             });
                         } else if (property.Equals("VM_elevator")) {
                             this.Dispatcher.Invoke(() =>
                             {
                                 var margin = Knob.Margin;
-                                margin.Bottom = PropertToJoystickPosition(viewModel.VM_elevator);
+                                margin.Top = JOYSTICK_SIZE - PropertToJoystickPosition(viewModel.VM_elevator);
                                 Knob.Margin = margin;
                             });
                         } else if (property.Equals("VM_throttle")) {

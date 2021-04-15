@@ -1,5 +1,5 @@
 ﻿MileStone1
-1.0.0.0
+
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\BenZvi\Documents\Tal\Bar_Ilan\First_Degree\Year_B\Advanced_Programming_2\Exercises\Ex1\FlightApp2\MileStone1\MileStone1\App.xaml
 5468565406
 
-29-1209874904
+271816561432
 192-1533232326
 controls\controlBar\controlBar.xaml;controls\dataBar\dataBar.xaml;controls\joystick\joystick.xaml;dataView\DataView.xaml;fileRead\MainWindow.xaml;
 
