@@ -7,7 +7,7 @@ namespace MileStone1
 {
     class DataBarViewModel : IDataBarViewModel//:  INotifyPropertyChanged
     {
-        //public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
         public IDataModel model;
 
         public DataBarViewModel(IDataModel model)
@@ -19,13 +19,13 @@ namespace MileStone1
             };*/
             this.model.UpdateAttribute += UseAttributeUpdate;
         }
-        /*public void NotifyPropertyChanged(string propName)
+        public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
-        }*/
+        }
 
         private void UseAttributeUpdate(Object sender, string property, double newValue)
         {
@@ -62,42 +62,66 @@ namespace MileStone1
         public double Altimeter
         {
             get { return altimeter; }
-            set { altimeter = value; }
+            set 
+            { 
+                altimeter = value;
+                NotifyPropertyChanged("Altimeter");
+            }
         }
 
         private double airSpeed;
-        public double Airspeed
+        public double AirSpeed
         {
             get { return airSpeed; }
-            set { airSpeed = value; }
+            set 
+            { 
+                airSpeed = value;
+                NotifyPropertyChanged("AirSpeed");
+            }
         }
 
         private double heading;
         public double Heading
         {
             get { return heading; }
-            set { heading = value; }
+            set 
+            { 
+                heading = value;
+                NotifyPropertyChanged("Heading");
+            }
         }
 
         private double pitch;
         public double Pitch
         {
             get { return pitch; }
-            set { pitch = value; }
+            set 
+            { 
+                pitch = value;
+                NotifyPropertyChanged("Pitch");
+            }
         }
 
         private double roll;
         public double Roll
         {
             get { return roll; }
-            set { roll = value; }
+            set 
+            {
+                roll = value;
+                NotifyPropertyChanged("Roll");
+            }
         }
 
         private double yaw;
         public double Yaw
         {
             get { return yaw; }
-            set { yaw = value; }
+            set 
+            {
+                yaw = value;
+                NotifyPropertyChanged("Yaw");
+            }
         }
     }
 }

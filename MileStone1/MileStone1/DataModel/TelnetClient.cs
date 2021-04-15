@@ -5,6 +5,11 @@ using System.Text;
 namespace MileStone1 {
     class TelnetClient : ITelnetClient {
         private TcpClient client;
+
+        public TelnetClient()
+        {
+            this.client = new TcpClient("localhost", 8081);
+        }
         public void Connect(string ip, int port) {
             client = new TcpClient("localhost", 8081);
         }

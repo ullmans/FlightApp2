@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-/*
+
 namespace MileStone1.controls.graphs
 {
     /// <summary>
@@ -109,7 +109,7 @@ namespace MileStone1.controls.graphs
             InitializeComponent();
         }
 
-        public void SetVM(double[][] input)
+        public void SetVM(List<double[]> input)
         {
             this.dviewmodel = new graphViewModel(input);
 
@@ -217,4 +217,3 @@ namespace MileStone1.controls.graphs
         }
     }
 }
-*/
