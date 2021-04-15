@@ -13,6 +13,7 @@ namespace MileStone1 {
         }
 
         public void Write(string data) {
+            //throw new Exception(data);
             NetworkStream stream = client.GetStream();
             Byte[] msg = Encoding.ASCII.GetBytes(data);
             stream.Write(msg, 0, msg.Length);
