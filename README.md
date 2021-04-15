@@ -47,6 +47,7 @@ The dash board contain:
 We built it as a UserControl and with the MVVM design pattern, so the view and the model does not know each other.
 
 ### Joystick
+Show the direction of the flight in every moment, with other important data.
 
 ### graph
 thr graph is present a chosen data from the csv code and show a graph of the values- (the values in csv is y_exis and the time is x_exis).
